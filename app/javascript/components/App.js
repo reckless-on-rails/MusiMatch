@@ -1,10 +1,24 @@
 import React from "react"
-import PropTypes from "prop-types"
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+
+import {
+  BrowserRouter,
+  Switch,
+  Route
+} from 'react-router-dom'
+
 class App extends React.Component {
   render () {
     return (
-      <React.Fragment>
-      </React.Fragment>
+      <BrowserRouter>
+      <Header/>
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+        <Footer/>
+      </BrowserRouter>
     );
   }
 }
