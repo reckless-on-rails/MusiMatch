@@ -34,5 +34,27 @@ $ rails g controller Controllername
 $ rails g resource Resourcename column_one:string column_two:string column_three:string column_four:integer
 ````
 
+UPDATES FOR AUTH USERS:
+    Added functionality for auth users to have different routes than unauth users
+
+    profiles_controller.rb
+
+    def index
+        @profile = current_user.profiles
+    end
+    ````
+    views/profiles/index.html.erb
+
+        profile: @profile
+    ````   
+    AuthApp.js    
+
+        <Header {...this.props} />
+                {this.props.logged_in && this.props.profile.length === 0 ? (
+                <CreateProfile {...this.props} />
+  
+
+
+
 
 
