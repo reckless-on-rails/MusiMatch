@@ -11,21 +11,13 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
   render() {
-    return this.props.logged_in && this.props.profile.length === 0 ? (
-      <CreateProfile {...this.props} />
-    ) : (
-      <BrowserRouter>
-        <Header {...this.props} />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/songindex" component={Songs} />
-          <Route path="/users" component={Users} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/aboutus" component={AboutUs} />
-        </Switch>
-        <Footer />
-      </BrowserRouter>
-    );
+    return <BrowserRouter>
+    <Header {...this.props} />
+    <Switch>
+      <Route exact path="/" component={Home} />
+    </Switch>
+    <Footer />
+  </BrowserRouter>
   }
 }
 
