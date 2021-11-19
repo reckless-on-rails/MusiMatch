@@ -15,9 +15,11 @@ import {
 
 class App extends React.Component {
   render () {
+    console.log(this.props)
     return (
       <BrowserRouter>
       <Header {...this.props}/>
+      
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/songindex" component={Songs} />
@@ -26,7 +28,7 @@ class App extends React.Component {
           <Route path="/aboutus" component={AboutUs} />
 
         </Switch>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     );
   }

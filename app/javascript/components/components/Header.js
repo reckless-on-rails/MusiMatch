@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from "react-router-dom";
+import tape from "../assets/tape8.gif"
 
 class Header extends Component {
     render() {
@@ -13,14 +14,14 @@ class Header extends Component {
         return (
             <header>
         <NavLink to="/">
-          <h1>logo</h1>
+          <img src={tape} alt="logo for musimatch" className="logo"></img>
         </NavLink>
         {!logged_in && 
             <>
               <ul>
                 <a href={new_user_route}>Sign Up</a>
-              </ul>
-              <ul>
+                <br></br>
+                <br></br>
                 <a href={sign_in_route}>Sign In</a>
               </ul>
             </>
