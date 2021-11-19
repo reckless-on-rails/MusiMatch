@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const CreateProfile = () => {
-  const [state, setState] = useState({})
+  const [state, setState] = useState({ displayName: '', contact: '', bio: ''})
   const handleChange = (e) => {
     setState({...state, [e.target.name]: e.target.value})
   }
