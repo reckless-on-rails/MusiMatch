@@ -34,5 +34,19 @@ $ rails g controller Controllername
 $ rails g resource Resourcename column_one:string column_two:string column_three:string column_four:integer
 ````
 
+<!-- UPDATES FOR AUTH USERS: -->
+
+1. Added method in profile controller
+2. Built second app called Auth App for authenticated users to be routed to   the main components of the app
+3. Added instance of profile to proflies/index.html 
+
+Authenticated users can now sign up and be redirected to create a profile from sign up page.
+
+
+
+  
+
+
+
 
 
