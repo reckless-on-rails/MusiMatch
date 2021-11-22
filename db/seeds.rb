@@ -5,7 +5,883 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+tracks = [
+  {
+    song_artist: 'Led Zeppelin',
+    song_name: 'Stairway to Heaven',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/26/Led_Zeppelin_-_Led_Zeppelin_IV.jpg'
+  },
+  {
+    song_artist: 'Led Zeppelin',
+    song_name: 'Immigrant Song',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/5f/Led_Zeppelin_-_Led_Zeppelin_III.png'
+  },
+  {
+    song_artist: 'The Rolling Stones',
+    song_name: 'Gimme Shelter',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg'
+  },
+  {
+    song_artist: 'The Rolling Stones',
+    song_name: 'Sympathy For the Devil',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://www.albumartexchange.com/coverart/gallery/th/therollingstones_beggarsbanquet_aoz.jpg'
+  },
+  {
+    song_artist: 'The Rolling Stones',
+    song_name: 'Paint It, Black',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/8a/Aftermath_UK.jpg'
+  },
+  {
+    song_artist: 'The Rolling Stones',
+    song_name: "(I Can't Get No) Satisfaction",
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/fa/RollingStonesOutofourHeadsalbumcover.jpg'
+  },
+  {
+    song_artist: 'The Rolling Stones',
+    song_name: 'Wild Horses',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/57/The_Rolling_Stones_-_Sticky_Fingers.png'
+  },
+  {
+    song_artist: 'The Rolling Stones',
+    song_name: "Can't You Hear Me Knocking",
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/57/The_Rolling_Stones_-_Sticky_Fingers.png'
+  },
+  {
+    song_artist: 'Pink Floyd',
+    song_name: 'Comfortably Numb',
+    genre: 'rock',
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/13/PinkFloydWallCoverOriginalNoText.jpg'
+  },
+  {
+    song_artist: 'Pink Floyd',
+    song_name: 'Wish You Were Here',
+    genre: 'rock',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/a/a4/Pink_Floyd%2C_Wish_You_Were_Here_%281975%29.png'
+  },
+  {
+    song_artist: 'The Beatles',
+    song_name: 'Let It Be',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/25/LetItBe.jpg'
+  },
+  {
+    song_artist: 'The Beatles',
+    song_name: 'Come Together',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg'
+  },
+  {
+    song_artist: 'The Beatles',
+    song_name: 'While My Guitar Gently Weeps',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/TheBeatles68LP.jpg/440px-TheBeatles68LP.jpg'
+  },
+  {
+    song_artist: 'Tom Petty',
+    song_name: "Free Fallin'",
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4d/Tom_Petty_Full_Moon_Fever.jpg'
+  },
+  {
+    song_artist: 'Tom Petty and the Heartbreakers',
+    song_name: 'American Girl',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/07/TomPettyDebutCover.jpg'
+  },
+  {
+    song_artist: 'Tom Petty',
+    song_name: "I Won't Back Down",
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4d/Tom_Petty_Full_Moon_Fever.jpg'
+  },
+  {
+    song_artist: 'Aerosmith',
+    song_name: 'Dream On',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/58/Aerosmith_-_Aerosmith.jpg'
+  },
+  {
+    song_artist: 'Aerosmith',
+    song_name: "I Don't Want to Miss a Thing",
+    genre: 'rock',
+    mood: 'romantic',
+    cover_url: ''
+  },
+  {
+    song_artist: 'Walk This Way',
+    song_name: 'Aerosmith',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/37/Aerosmith_-_Toys_in_the_Attic.jpg'
+  },
+  {
+    song_artist: 'Prince',
+    song_name: 'When Doves Cry',
+    genre: 'rock',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/9c/Princepurplerain.jpg'
+  },
+  {
+    song_artist: 'Prince',
+    song_name: 'Kiss',
+    genre: 'rock',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c6/ParadeLP.jpg'
+  },
+  {
+    song_artist: 'AC/DC',
+    song_name: 'Back In Black',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/ACDC_Back_in_Black.png/440px-ACDC_Back_in_Black.png'
+  },
+  {
+    song_artist: 'AC/DC',
+    song_name: 'Thunderstruck',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/a/a8/Razorsedge.jpg'
+  },
+  {
+    song_artist: 'Joan Jett',
+    song_name: "I Love Rock'n Roll",
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/84/Arrows_I_Love_Rock_n_Roll.jpg'
+  },
+  {
+    song_artist: 'The Cranberries',
+    song_name: 'Zombie',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/2c/CranberriesNoNeedToArgueAlbumcover.jpg'
+  },
+  {
+    song_artist: "Guns N' Roses",
+    song_name: 'Welcome to the Jungle',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/60/GunsnRosesAppetiteforDestructionalbumcover.jpg'
+  },
+  {
+    song_artist: "Guns N' Roses",
+    song_name: "Sweet Child O' Mine",
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/60/GunsnRosesAppetiteforDestructionalbumcover.jpg'
+  },
+  {
+    song_artist: "Guns N' Roses",
+    song_name: 'Patience',
+    genre: 'rock',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/a/ad/GNR_GNRLies_Original.jpg'
+  },
+  {
+    song_artist: 'Fleetwood Mac',
+    song_name: 'Landslide',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b1/Fleetwood_Mac_-_Fleetwood_Mac_%281975%29.png'
+  },
+  {
+    song_artist: 'Fleetwood Mac',
+    song_name: 'Dreams',
+    genre: 'rock',
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG'
+  },
+  {
+    song_artist: 'The Jimi Hendrix Experience',
+    song_name: 'All Along the Watchtower',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f2/Jimi_Hendrix_-_Electric_Ladyland.jpg'
+  },
+  {
+    song_artist: 'The Jimi Hendrix Experience',
+    song_name: 'Purple Haze',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Are_You_Experienced_-_US_cover-edit.jpg/440px-Are_You_Experienced_-_US_cover-edit.jpg'
+  },
+  {
+    song_artist: 'The Jimi Hendrix Experience',
+    song_name: 'The Wind Cries Mary',
+    genre: 'rock',
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Are_You_Experienced_-_US_cover-edit.jpg/440px-Are_You_Experienced_-_US_cover-edit.jpg'
+  },
+  {
+    song_artist: 'Faith No More',
+    song_name: 'Epic',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/89/The_Real_Thing_album_cover.jpg'
+  },
+  {
+    song_artist: 'Faith No More',
+    song_name: 'Easy',
+    genre: 'rock',
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/24/Faith_no_more_angel_dust.jpg'
+  },
+  {
+    song_artist: 'Van Halen',
+    song_name: 'Panama',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://en.wikipedia.org/wiki/File:Van_Halen_-_1984.jpg'
+  },
+  {
+    song_artist: 'Van Halen',
+    song_name: 'Jump',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://en.wikipedia.org/wiki/File:Van_Halen_-_1984.jpg'
+  },
+  {
+    song_artist: 'Van Halen',
+    song_name: "Runnin' with the Devil",
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/0d/Van_Halen_album.jpg'
+  },
+  {
+    song_artist: 'Mötley Crüe',
+    song_name: 'Kickstart My Heart',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/38/Motley_Crue_-_Dr_Feelgood-front.jpg'
+  },
+  {
+    song_artist: 'Mötley Crüe',
+    song_name: 'Girls, Girls, Girls',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/17/Girls%2C_Girls%2C_Girls_%28M%C3%B6tley_Cr%C3%BCe_album%29.jpg'
+  },
+  {
+    song_artist: 'Santana',
+    song_name: 'Oye Como Va',
+    genre: 'rock', 
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c4/SantanaAbraxas.jpg'
+  },
+  {
+    song_artist: 'Santana',
+    song_name: 'Move',
+    genre: 'rock', 
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/7f/Santana_-_Supernatural_-_CD_album_cover.jpg'
+  },
+  {
+    song_artist: 'Blue Oyster Cult',
+    song_name: "Don't Fear the Reaper",
+    genre: 'rock',
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/57/BlueOysterCultAgentsofFortune.jpg'
+  },
+  {
+    song_artist: 'Lenny Kravitz',
+    song_name: 'Are You Gonna Go My Way',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/0f/Lenny_Kravitz-Are_You_Gonna_Go_My_Way.gif'
+  },
+  {
+    song_artist: 'Lenny Kravitz',
+    song_name: "It Ain't Over 'Til It's Over",
+    genre: 'rock',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/88/Lenny_Kravitz-Mama_Said_%28album_cover%29.jpg'
+  },
+  {
+    song_artist: 'Beastie Boys',
+    song_name: 'Sabotage',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/92/Beastie_Boys_Ill_Communication.jpg'
+  },
+  {
+    song_artist: 'The Who',
+    song_name: "Baba O'Riley",
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/44/Whosnext.jpg'
+  },
+  {
+    song_artist: 'The Who',
+    song_name: 'Who Are You',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/75/Who_Are_You_album_cover.JPG'
+  },
+  {
+    song_artist: 'Queen',
+    song_name: 'Bohemian Rhapsody',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4d/Queen_A_Night_At_The_Opera.png'
+  },
+  {
+    song_artist: 'Queen',
+    song_name: 'Another One Bites the Dust',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/16/Queen_The_Game.png'
+  },
+  {
+    song_artist: 'Queen',
+    song_name: "Don't Stop Me Now",
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/06/Queen_Jazz.png'
+  },
+  {
+    song_artist: 'Bon Jovi',
+    song_name: "Livin' On a Prayer",
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/a/ab/Bon_jovi_slippery_when_wet.jpg'
+  },
+  {
+    song_artist: 'Bon Jovi',
+    song_name: 'Wanted Dead or Alive',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/a/ab/Bon_jovi_slippery_when_wet.jpg'
+  },
+  {
+    song_artist: 'Lynyrd Skynyrd',
+    song_name: 'Free Bird',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b0/Lynyrdskynyrd.jpg'
+  },
+  {
+    song_artist: 'Lynyrd Skynyrd',
+    song_name: 'Simple Man',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b0/Lynyrdskynyrd.jpg'
+  },
+  {
+    song_artist: 'Ozzy Osbourne',
+    song_name: 'Crazy Train',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/23/Blizzard_of_ozz.jpg'
+  },
+  {
+    song_artist: 'Black Sabbath',
+    song_name: 'Iron Man',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/64/Black_Sabbath_-_Paranoid.jpg'
+  },
+  {
+    song_artist: 'Bruce Springsteen',
+    song_name: 'Born to Run',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/7a/Born_to_Run_%28Front_Cover%29.jpg'
+  },
+  {
+    song_artist: 'Bruce Springsteen',
+    song_name: 'Dancing in the Dark',
+    genre: 'rock',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/31/BruceBorn1984.JPG'
+  },
+  {
+    song_artist: 'Rush',
+    song_name: 'Tom Sawyer',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4a/Moving_Pictures.jpg'
+  },
+  {
+    song_artist: 'Bob Dylan',
+    song_name: 'Like a Rolling Stone',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/95/Bob_Dylan_-_Highway_61_Revisited.jpg'
+  },
+  {
+    song_artist: 'Bob Dylan',
+    song_name: "The Times They Are a-Changin'",
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f1/Bob_Dylan_-_The_Times_They_Are_a-Changin%27.jpg'
+  },
+  {
+    song_artist: 'Eagles',
+    song_name: 'Hotel California',
+    genre: 'rock',
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/49/Hotelcalifornia.jpg'
+  },
+  {
+    song_artist: 'Eagles',
+    song_name: 'Witchy Woman',
+    genre: 'rock',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/d2/The_Eagles_-_The_Eagles.jpeg'
+  },
+  {
+    song_artist: 'Metallica',
+    song_name: 'Master of Puppets',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b2/Metallica_-_Master_of_Puppets_cover.jpg'
+  },
+  {
+    song_artist: 'Metallica',
+    song_name: 'Enter Sandman',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/2c/Metallica_-_Metallica_cover.jpg'
+  },
+  {
+    song_artist: 'Metallica',
+    song_name: 'The Unforgiven',
+    genre: 'rock',
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/2c/Metallica_-_Metallica_cover.jpg'
+  },
+  {
+    song_artist: 'Pearl Jam',
+    song_name: 'Even Flow',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/2d/PearlJam-Ten2.jpg'
+  },
+  {
+    song_artist: 'Pearl Jam',
+    song_name: 'Black',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/2d/PearlJam-Ten2.jpg'
+  },
+  {
+    song_artist: 'Nirvana',
+    song_name: 'Smells like Teen Spirit',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg'
+  },
+  {
+    song_artist: 'Nirvana',
+    song_name: 'Heart-Shaped Box',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/e5/In_Utero_%28Nirvana%29_album_cover.jpg'
+  },
+  {
+    song_artist: 'Iron Maiden',
+    song_name: 'Run to the Hills',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/32/IronMaiden_NumberOfBeast.jpg'
+  },
+  {
+    song_artist: 'Creedence Clearwater Revival',
+    song_name: 'Fortunate Son',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/85/Willy_and_the_poor_boys.jpg'
+  },
+  {
+    song_artist: 'Creedence Clearwater Revival',
+    song_name: 'Bad Moon Rising',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/04/Creedence_Clearwater_Revival_-_Green_River.jpg'
+  },
+  {
+    song_artist: 'The Doors',
+    song_name: 'Riders On the Storm',
+    genre: 'rock',
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/41/The_Doors_-_L.A._Woman.jpg'
+  },
+  {
+    song_artist: 'The Doors',
+    song_name: 'Break On Through (To the Other Side)',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/98/TheDoorsTheDoorsalbumcover.jpg'
+  },
+  {
+    song_artist: 'ZZ Top',
+    song_name: 'La Grange',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/dd/ZZ_Top_-_Tres_Hombres.jpg'
+  },
+  {
+    song_artist: 'Dave Matthews Band',
+    song_name: 'Crash Into Me',
+    genre: 'rock',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/6a/DMB_Crash.png'
+  },
+  {
+    song_artist: 'John Mayer',
+    song_name: 'Your Body Is a Wonderland',
+    genre: 'rock',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/5a/JohnMayer_RoomForSquares.jpg'
+  },
+  {
+    song_artist: 'Billy Idol',
+    song_name: 'Rebel Yell',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/1b/BillyIdolRebelYell.jpg'
+  },
+  {
+    song_artist: 'Billy Idol',
+    song_name: 'Mony Mony',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/59/Vital_Idol_1985.jpg'
+  },
+  {
+    song_artist: 'Poison',
+    song_name: 'Every Rose Has Its Thorn',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/5f/Open_Up_and_Say_Ahh_Cover.jpg'
+  },
+  {
+    song_artist: 'The Police',
+    song_name: 'Roxanne',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f3/Police-album-outlandosdamour.jpg'
+  },
+  {
+    song_artist: 'Oasis',
+    song_name: 'Champagne Supernova',
+    genre: 'rock',
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b1/Oasis_-_%28What%27s_The_Story%29_Morning_Glory_album_cover.jpg'
+  },
+  {
+    song_artist: 'The White Stripes',
+    song_name: 'Seven Nation Army',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/11/Elephant%2C_The_White_Stripes.png'
+  },
+  {
+    song_artist: 'Niel Diamond',
+    song_name: 'Sweet Caroline',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/dc/Sweet_Caroline_cover.jpg'
+  },
+  {
+    song_artist: 'INXS',
+    song_name: 'Need You Tonight',
+    genre: 'rock',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/d2/INXS_kick.jpg'
+  },
+  {
+    song_artist: 'Journey',
+    song_name: "Don't Stop Believin'",
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/e0/JourneyEscapealbumcover.jpg'
+  },
+  {
+    song_artist: 'Jet',
+    song_name: 'Are You Gonna Be My Girl',
+    genre: 'rock',
+    mood: '',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/40/Jet_-_Get_Born.jpg'
+  },
+  {
+    song_artist: 'Def Leppard',
+    song_name: 'Pour Some Sugar On Me',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/40/Def_Leppard_-_Hysteria_%28vinyl_version%29.jpg'
+  },
+  {
+    song_artist: 'Neil Young',
+    song_name: 'Old Man',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/9b/NeilYoungHarvestalbumcover.jpg'
+  },
+  {
+    song_artist: 'Motörhead',
+    song_name: 'Ace of Spades',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/57/Mot%C3%B6rhead_-_Ace_of_Spades_%281980%29.jpg'
+  },
+  {
+    song_artist: 'Styx',
+    song_name: 'Come Sail Away',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/5a/Styx_-_The_Grand_Illusion.jpg'
+  },
+  {
+    song_artist: 'Styx',
+    song_name: 'Mr. Roboto',
+    genre: 'rock',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/82/Styx_-_Kilroy_Was_Here.jpg'
+  },
+  {
+    song_artist: 'Foo Fighters',
+    song_name: 'Everlong',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/0d/FooFighters-TheColourAndTheShape.jpg'
+  },
+  {
+    song_artist: 'Foo Fighters',
+    song_name: 'The Pretender',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/68/Foos-ESPG.jpg'
+  },
+  {
+    song_artist: 'Weezer',
+    song_name: 'Undone - The Sweater Song',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/70/Weezer_-_Blue_Album.png'
+  },
+  {
+    song_artist: 'Weezer',
+    song_name: 'Hashpipe',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/93/Weezer_-_Green_Album.png'
+  },
+  {
+    song_artist: 'Living Colour',
+    song_name: 'Cult of Personality',
+    genre: 'rock',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/0e/Living_Colour-Vivid.jpg'
+  },
+  {
+    song_artist: 'Whitesnake',
+    song_name: 'Here I Go Again',
+    genre: 'rock',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c8/Whitesnake-saints.jpg'
+  },
+  {
+    song_artist: 'Soundgarden',
+    song_name: 'Black Hole Sun',
+    genre: 'alternative',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/3a/Superunknown.jpg'
+  },
+  {
+    song_artist: 'Marcy Playground',
+    song_name: 'Sex and Candy',
+    genre: 'alternative',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c0/Marcy_Playground_-_Marcy_Playground_album_cover.gif'
+  },
+  {
+    song_artist: 'Red Hot Chili Peppers',
+    song_name: 'Under the Bridge',
+    genre: 'alternative',
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/5e/RHCP-BSSM.jpg'
+  },
+  {
+    song_artist: 'Red Hot Chili Peppers',
+    song_name: 'Scar Tissue',
+    genre: 'alternative',
+    mood: 'chill',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/df/RedHotChiliPeppersCalifornication.jpg'
+  },
+  {
+    song_artist: 'Green Day',
+    song_name: 'Boulevard of Broken Dreams',
+    genre: 'alternative',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/ed/Green_Day_-_American_Idiot_album_cover.png'
+  },105
+  {
+    song_artist: 'Green Day',
+    song_name: 'Basket Case',
+    genre: 'alternative',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4b/Green_Day_-_Dookie_cover.jpg'
+  },
+  {
+    song_artist: 'No Doubt',
+    song_name: "Don't Speak",
+    genre: 'alternative',
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/9d/No_Doubt_-_Tragic_Kingdom.png'
+  },
+  {
+    song_artist: 'Blink-182',
+    song_name: "What's My Age Again?",
+    genre: 'alternative',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/a/a6/Blink-182_-_Enema_of_the_State_cover.jpg'
+  },
+  {
+    song_artist: 'Blink-182',
+    song_name: 'I Miss You',
+    genre: 'alternative',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/8f/Blink-182_-_Blink-182_cover.jpg'
+  },
+  {
+    song_artist: 'Paramore',
+    song_name: 'Misery Business',
+    genre: 'alternative',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/28/Paramore_-_Riot%21.png'
+  },
+  {
+    song_artist: 'Paramore',
+    song_name: 'Crushcrushcrush',
+    genre: 'alternative',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/28/Paramore_-_Riot%21.png'
+  },
+  {
+    song_artist: 'Kings of Leon',
+    song_name: 'Sex On Fire',
+    genre: 'alternative',
+    mood: 'romantic',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c1/KingsOfLeon-OnlyByTheNightCover.png'
+  },
+  {
+    song_artist: 'The Strokes',
+    song_name: 'Reptilia',
+    genre: 'alternative',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/9f/Room_on_Fire_cover.jpg'
+  },
+  {
+    song_artist: 'The Strokes',
+    song_name: 'Last Nite',
+    genre: 'alternative',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/09/The_Strokes_-_Is_This_It_cover.png'
+  },
+  {
+    song_artist: 'Cage the Elephant',
+    song_name: 'No Rest For the Wick',
+    genre: 'alternative',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/95/Cage_the_elephant_album.jpg'
+  },
+  {
+    song_artist: 'Wolfmother',
+    song_name: 'Woman',
+    genre: 'alternative',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c1/Wolfmother_album_cover.jpg'
+  },
+  {
+    song_artist: 'Coldplay',
+    song_name: 'Viva la Vida',
+    genre: 'alternative',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/25/Viva_la_Vida_or_Death_and_All_His_Friends.jpg'
+  },
+  {
+    song_artist: 'Linkin Park',
+    song_name: 'One Step Closer',
+    genre: 'alternative',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/2a/Linkin_Park_Hybrid_Theory_Album_Cover.jpg'
+  },
+  {
+    song_artist: 'Slipknot',
+    song_name: 'Eyeless',
+    genre: 'alternative',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/44/Slipknot_-_Slipknot2.jpg'
+  },
+  {
+    song_artist: 'The Killers',
+    song_name: 'Mr. Brightside',
+    genre: 'alternative',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/17/The_Killers_-_Hot_Fuss.png'
+  },
+  {
+    song_artist: 'Rage Against the Machine',
+    song_name: 'Bulls on Parade',
+    genre: 'alternative',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/45/Rage_Against_the_Machine_-_Evil_Empire.png'
+  },
+  {
+    song_artist: 'Rage Against the Machine',
+    song_name: 'Guerrilla Radio',
+    genre: 'alternative',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/51/RAtM-BattleofLosAngeles.jpeg'
+  },
+  {
+    song_artist: 'Børns',
+    song_name: 'Electric Love',
+    genre: 'alternative',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/72/Dopamine_Studio_Album_Cover.jpg'
+  },
+  {
+    song_artist: 'Imagine Dragons',
+    song_name: 'Radioactive',
+    genre: 'alternative',
+    mood: 'hype',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/3f/Night_Visions_Album_Cover.jpeg'
+  },
+  {
+    song_artist: 'The Raconteurs',
+    song_name: 'Steady, As She Goes',
+    genre: 'alternative',
+    mood: 'happy',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b6/Broken_Boy_Soldiers.jpg'
+  }
+  
 const rap =
     [
 
