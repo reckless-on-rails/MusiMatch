@@ -3758,6 +3758,6 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/6f/C%27est_Chic_cover.jp
 ]
 
 
-songs.each do |attributes|
-  Song.create attributes
+songs.each do |attribute|
+  Song.create attribute
 end

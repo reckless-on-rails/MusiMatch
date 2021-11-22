@@ -10,6 +10,15 @@ import CreateProfile from "./pages/CreateProfile";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      songs: []
+    }
+  }
+
+//Songs are coming from rails NOT FROM FETCH
+
   render() {
     return (
       <BrowserRouter>
