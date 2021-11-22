@@ -7,6 +7,881 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 tracks = [
   {
+        song_artist: 'Babyface',
+        song_name: 'When Can I See You',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://img.discogs.com/09oQwqEfxWXYRdppvjHWEaIQPH0=/fit-in/597x597/filters:strip_icc():format(webp):mode_rgb():quality(90)/discogs-images/R-237131-1461720864-9806.png.jpg'
+    },
+    {
+        song_artist: 'Toni Braxton',
+        song_name: "You're Making Me High",
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/14/Toni_Braxton_-_Secrets.png/220px-Toni_Braxton_-_Secrets.png'
+    },
+    {
+        song_artist: 'Whitney Houston',
+        song_name: 'Heartbreak Hotel',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/uk/5/51/Whitney_Houston_-_My_Love_Is_Your_Love_album_cover.jpg'
+    },
+    {
+        song_artist: 'Mark Morrison',
+        song_name: 'Return of the Mack',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://img.discogs.com/Nnqb3JaKTtZ7VV2d_iAXqUrYnTY=/fit-in/388x615/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8149477-1456067207-6277.png.jpg'
+    },
+    {
+        song_artist: 'Mint Condition',
+        song_name: 'Breakin My Heart (Pretty Brown Eyes)',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://m.media-amazon.com/images/I/81le9UFvpuL._SS500_.jpg'
+    },
+    {
+        song_artist: 'Groove Theory',
+        song_name: 'Tell Me',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/6f/Groove_Theory_-_Groove_Theory_album_cover.jpg'
+    },
+    {
+        song_artist: 'Michael Jackson',
+        song_name: 'Remember the Time',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg'
+    },
+    {
+        song_artist: 'Xscape',
+        song_name: 'Just Kickin It',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/Hummin%27_Comin%27_at_%27Cha_%28XScape_album_-_cover_art%29.jpg/220px-Hummin%27_Comin%27_at_%27Cha_%28XScape_album_-_cover_art%29.jpg'
+    },
+    {
+        song_artist: 'TLC',
+        song_name: 'Creep',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/TLC_-_CrazySexyCool_album_cover.png/220px-TLC_-_CrazySexyCool_album_cover.png'
+    },
+    {
+        song_artist: 'SWV',
+        song_name: "I'm So Into You",
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/16/It%27s_About_Time_%28SWV_album%29.jpeg/220px-It%27s_About_Time_%28SWV_album%29.jpeg'
+    },
+    {
+        song_artist: 'Soul For Real',
+        song_name: 'Candy Rain',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://m.media-amazon.com/images/I/61VLIT3SVcL._SL1050_.jpg'
+    },
+    {
+        song_artist: 'Brandy & Monica',
+        song_name: 'The Boy is Mine',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://www.rhino.com/sites/rhino.com/files/styles/square/public/aod/R-1459365-1355237167-2822.jpeg.jpg?itok=xIHu5FDP'
+    },
+    {
+        song_artist: 'Donell Jones',
+        song_name: "U Know What's Up",
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://m.media-amazon.com/images/I/51C5oZwuqsL.jpg'  
+    },
+    {
+        song_artist: "Destiny's Chils",
+        song_name: "Jumpin' Jumpin'",
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/76/Destiny%27s_Child_%E2%80%93_Jumpin%27%2C_Jumpin%27_%28single%29.jpg'  
+    },
+    {
+        song_artist: 'Total',
+        song_name: "Can't You See?",
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://m.media-amazon.com/images/I/712-QpoAYwL._SS500_.jpg'  
+    },
+    {
+        song_artist: 'Bruno Mars',
+        song_name: "Smokin' Out The Window",
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://i.ytimg.com/an/GG7fLOmlhYg/13907728046801342980_mq.jpg?v=6183f9a4'  
+    },
+    {
+        song_artist: 'Summer Walker',
+        song_name: 'No Love',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://media.pitchfork.com/photos/6182c894b92ce60e3c988f9c/1:1/w_320/Summer-Walker-Still-Over-It.jpeg'  
+    },
+    {
+        song_artist: 'Doja Cat',
+        song_name: 'Woman',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://charts-static.billboard.com/img/2018/04/doja-cat-lm6-344x344.jpg'  
+    },
+    {
+        song_artist: 'Jagged Edge',
+        song_name: 'Hope',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/6b/Jagged_Edge_JE_Heartbreak_2.jpg'  
+    },
+    {
+        song_artist: 'PARTYNEXTDOOR',
+        song_name: 'Recognize',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/de/PartyNextDoorTwoCover.png'  
+    },
+    {
+        song_artist: 'Drake',
+        song_name: 'Girls Want Girls',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/bkb6liabgmcfezq1t0e8/drake-certified-lover-boy-cover-art?fimg-ssr-default'  
+    },
+    {
+        song_artist: 'Miguel',
+        song_name: 'Adorn',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/e8/Miguel-Kaleidoscope_Dream.jpg'  
+    },
+    {
+        song_artist: 'Jhene Aiko',
+        song_name: 'Spotless Mind',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Jheneaiko_souledout.png/220px-Jheneaiko_souledout.png'  
+    },
+    {
+        song_artist: 'K. Michelle',
+        song_name: "Love 'Em All",
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://i1.sndcdn.com/artworks-000099659683-376av1-t500x500.jpg'  
+    },
+    {
+        song_artist: 'Ciara',
+        song_name: 'I Bet',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/0f/I_Bet_%28Ciara_single_-_cover_art%29.png'  
+    },
+    {
+        song_artist: 'Jason Derulo',
+        song_name: 'Want to Want Me',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/1b/Jason_Derulo_-_Want_to_Want_Me.png' 
+    },
+    {
+        song_artist: 'Trey Songz',
+        song_name: 'Slow Motion',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/83/TreySongzSlowMotion.jpg' 
+    },
+    {
+        song_artist: 'F*ck Love',
+        song_name: 'Trina',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://m.media-amazon.com/images/I/81OfSlfxMpL._SS500_.jpg' 
+    },
+    {
+        song_artist: 'Monifah',
+        song_name: 'One Moment',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://images-na.ssl-images-amazon.com/images/I/51MmQQd98yL._SY445_SX342_QL70_ML2_.jpg' 
+    },
+    {
+        song_artist: 'Beyonce',
+        song_name: '711',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Beyonc%C3%A9_-_Beyonc%C3%A9.svg/1200px-Beyonc%C3%A9_-_Beyonc%C3%A9.svg.png' 
+    },
+    {
+        song_artist: 'Ne-Yo',
+        song_name: 'She Knows',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://m.media-amazon.com/images/I/81vlUcxNaWL._SS500_.jpg' 
+    },
+    {
+        song_artist: 'Jeremih',
+        song_name: 'Planez',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://m.media-amazon.com/images/I/81N9c39xybL._SS500_.jpg' 
+    },
+    {
+        song_artist: 'The Weeknd',
+        song_name: 'Earned It',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b2737fcead687e99583072cc217b' 
+    },
+    {
+        song_artist: 'Jessie Ware',
+        song_name: 'Meet Me In The Middle',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://cdns-images.dzcdn.net/images/cover/9221f9ea8707ce5a87c423c950f5d7c2/350x350.jpg' 
+    },
+    {
+        song_artist: 'Natalie De La Rose',
+        song_name: 'Somebody',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://m.media-amazon.com/images/I/71yJBF7ASrL._SS500_.jpg' 
+    },
+    {
+        song_artist: 'Tinashe',
+        song_name: 'All Hands On Deck',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b6/TinasheIggyAllHands.jpg' 
+    },
+    {
+        song_artist: 'Summer Walker',
+        song_name: 'Off Of You',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://i.ytimg.com/vi/K89psg6KMQ4/maxresdefault.jpg' 
+    },
+    {
+        song_artist: 'Gwen Stefani',
+        song_name: "Baby Don't Lie",
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Gwen_Stefani_-_Baby_Don%27t_Lie.png/220px-Gwen_Stefani_-_Baby_Don%27t_Lie.png' 
+    },
+    {
+        song_artist: 'Tori Kelly',
+        song_name: 'Nobody Love',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Nobody_Love_by_Tori_Kelly.png/220px-Nobody_Love_by_Tori_Kelly.png' 
+    },
+    {
+        song_artist: 'John Legend',
+        song_name: 'All of Me',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://i1.sndcdn.com/artworks-000095552167-qolfrv-t500x500.jpg' 
+    },
+    {
+        song_artist: 'Maejor',
+        song_name: 'Get You Alone',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://m.media-amazon.com/images/I/71aWF6zCtYL._SS500_.jpg' 
+    },
+    {
+        song_artist: 'Wiz Khalifa',
+        song_name: 'Something New',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f9/WizKhalifaSomethingNew.jpg' 
+    },
+    {
+        song_artist: 'Sevyn Streeter',
+        song_name: 'How Bad Do You Want It ',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://i1.sndcdn.com/artworks-000140473651-t65im0-t500x500.jpg' 
+    },
+    {
+        song_artist: 'Blxst',
+        song_name: 'Pop Out',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b273395845659643cce352f96885' 
+    },
+    {
+        song_artist: 'Jazmine Sullivan',
+        song_name: 'Mascara',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://m.media-amazon.com/images/I/71YRnH7SLLL._SL1500_.jpg' 
+    },
+    {
+        song_artist: 'Fifth Harmony',
+        song_name: 'Worth It',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Fifth_Harmony_-_Reflection_%28Official_Album_Cover%29.png/220px-Fifth_Harmony_-_Reflection_%28Official_Album_Cover%29.png' 
+    },
+    {
+        song_artist: 'Victoria Monet',
+        song_name: "Coastin'",
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://cdn.vox-cdn.com/thumbor/-7DtHMFfVcelEQN0N9C7UG__A7o=/0x0:1071x745/1200x800/filters:focal(461x170:631x340)/cdn.vox-cdn.com/uploads/chorus_image/image/69685303/Screenshot_2021_08_05_161717.0.png' 
+    },
+    {
+        song_artist: 'Aloe Blacc',
+        song_name: 'The Man',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://m.media-amazon.com/images/I/71lHp98HejL._SL1500_.jpg' 
+    },
+    {
+        song_artist: 'Kaash Paige',
+        song_name: 'Love Songs',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://i.pinimg.com/originals/78/a3/83/78a383641b6d85dc36da52f1e97dc812.jpg' 
+    },
+    {
+        song_artist: 'The Dream',
+        song_name: "That's My Shit",
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b27349ad1e7d5dc88c8d11fa4f92' 
+    },
+    {
+        song_artist: 'Emeli Sande',
+        song_name: 'Next To Me',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/53/NextToMe.jpg'  
+    },
+    {
+        song_artist: 'Mary J. Blige',
+        song_name: 'Right Now',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/commons/c/cc/Right_Now_%28Mary_J._Blige_song%29.png'  
+    },
+    {
+        song_artist: 'Deborah Cox',
+        song_name: 'Kinds Miss You',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://m.media-amazon.com/images/I/718kBC8K7SL._SS500_.jpg'  
+    },
+    {
+        song_artist: 'LL Cool J',
+        song_name: 'Luv You Better',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://img.discogs.com/Hn1GcAuxouoSOe7hTGt8M3OFWWM=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-229061-1634885475-7121.jpeg.jpg'  
+    },
+    {
+        song_artist: 'Chris Brown',
+        song_name: 'New Flame',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b2732fa07c5de267229a015fe25d'  
+    },
+    {
+        song_artist: 'Alicia Keys',
+        song_name: 'We Are Here',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/80/We_Are_Here_%28song%29.jpg'  
+    },
+    {
+        song_artist: 'Teyana Taylor',
+        song_name: 'Maybe',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4d/TeyanaTaylorMaybe.png'  
+    },
+    {
+        song_artist: 'Leela James',
+        song_name: 'Fall for You',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://m.media-amazon.com/images/I/71EPz-jGi9L._SY355_.jpg'  
+    },
+    {
+        song_artist: 'Laura Mvula',
+        song_name: 'Green Garden',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/93/GreenGardensong.jpg'  
+    },
+    {
+        song_artist: 'Joe',
+        song_name: 'Ride Wit U',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'http://images.genius.com/69a8660df9f9301797174a3166e79f58.300x300x1.jpg'  
+    },
+    {
+        song_artist: 'Robin Thicke',
+        song_name: 'Get Her Back',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Robin_Thicke_Get_Her_Back.jpg/220px-Robin_Thicke_Get_Her_Back.jpg'  
+    },
+    {
+        song_artist: 'Nneka',
+        song_name: 'My Love, My Love',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://img.discogs.com/Y99H7NUG_m6S0QO7rmqPRZ6sbvg=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-9036883-1473675517-7985.jpeg.jpg'  
+    },
+    {
+        song_artist: 'Tamar Braxton',
+        song_name: 'Let Me Know',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Tamar_Braxton_Let_Me_Know_feat_Future.jpg/220px-Tamar_Braxton_Let_Me_Know_feat_Future.jpg'  
+    },
+    {
+        song_artist: 'Megan Thee Stallion',
+        song_name: 'Cognac Queen',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://m.media-amazon.com/images/I/71a7dQ1SbUL._SS500_.jpg'  
+    },
+    {
+        song_artist: 'Rico Love',
+        song_name: 'Sombody Else',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/9e/f7/f3/9ef7f350-4cf6-861f-4ff4-fbedc4b1dae7/00602547390998.rgb.jpg/400x400cc.jpg'  
+    },
+    {
+        song_artist: 'Prince',
+        song_name: 'THIS COULD BE US',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Art_Official_Age.jpg/220px-Art_Official_Age.jpg'  
+    },
+    {
+        song_artist: 'Mila J',
+        song_name: 'My Main',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b27336b49616e28e63055ee267c1'  
+    },
+    {
+        song_artist: 'Sevyn Streeter',
+        song_name: 'nEXT',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://img.discogs.com/5XyZZIl8e544wm1pGHCb5YtKZ7g=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8474583-1462314678-7266.jpeg.jpg'  
+    },
+    {
+        song_artist: 'KeKe Wyatt',
+        song_name: 'Lie Under You',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://i.ytimg.com/vi/THg_0wsyF0s/maxresdefault.jpg'  
+    },
+    {
+        song_artist: 'Emily King',
+        song_name: 'Distance',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b27376bdb3bd3df31fee9b798473'  
+    },
+    {
+        song_artist: 'Ciara',
+        song_name: 'Other Chicks',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://m.media-amazon.com/images/I/71jbFxR1NpL._SL1500_.jpg'  
+    },
+    {
+        song_artist: 'Joe',
+        song_name: 'If You Lose Her',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/If_You_Lose_Her.jpg/220px-If_You_Lose_Her.jpg'  
+    },
+    {
+        song_artist: 'Goapele',
+        song_name: 'Hey Boy',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://m.media-amazon.com/images/I/81wtjHNRDXL._SS500_.jpg'  
+    },
+    {
+        song_artist: 'Macy Gray',
+        song_name: 'First Time',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f5/Macy_Gray_-_On_How_Life_Is.png'  
+    },
+    {
+        song_artist: 'Khalid',
+        song_name: 'Right Back',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://images.genius.com/a1095650e03dec89017682d0b304ac11.1000x1000x1.jpg'  
+    },
+    {
+        song_artist: 'Sisqo',
+        song_name: 'A-List',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://i0.cdn.hhv.de/catalog/shop_detail_zoom/00048/48760.jpg'  
+    },
+    {
+        song_artist: 'Jamie Foxx',
+        song_name: "Ain't My Fault",
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://i.scdn.co/image/ab67616d00001e027454c8b62e42e482d06e022f'  
+    },
+    {
+        song_artist: 'Omarion',
+        song_name: 'Show Me',
+        genre: 'r&b',
+        mood: 'chil',
+        cover_url: 'https://www.rap-up.com/app/uploads/2014/08/omarion-jeremih-show-me-1280x720.jpg'  
+    },
+    {
+        song_artist: 'Mariah Carey',
+        song_name: 'Dedicated',
+        genre: 'r&b',
+        mood: 'romantic',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b273bd435b3891c7093f261379e8'  
+    },
+    {
+        song_artist: 'Monophonics',
+        song_name: 'Promises',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://f4.bcbits.com/img/0004725864_10.jpg'  
+    },
+    {
+        song_artist: 'Elle Varner',
+        song_name: 'F**k It All',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://m.media-amazon.com/images/I/813CXv1b45L._SS500_.jpg'  
+    },
+    {
+        song_artist: 'Avery Sunshine',
+        song_name: 'Call My Name',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://img.discogs.com/P825FFn4ED3WJBBmlPICkQiMO0k=/fit-in/600x526/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-12562540-1538198584-4313.jpeg.jpg'  
+    },
+    {
+        song_artist: 'Jazmine Sullivan',
+        song_name: 'Pick Up Your Feelings',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://m.media-amazon.com/images/I/81Ax2QKqskL._SS500_.jpg'  
+    },
+    {
+        song_artist: 'Lil Tjay',
+        song_name: 'Calling My Phone',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Lil_Tjay_-_Calling_My_Phone.png/220px-Lil_Tjay_-_Calling_My_Phone.png'  
+    },
+    {
+        song_artist: 'Drake',
+        song_name: 'Wants and Needs',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://m.media-amazon.com/images/I/610wyMBI+yL._SS500_.jpg'  
+    },
+    {
+        song_artist: 'H.E.R.',
+        song_name: 'Come Through',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Comethrough.jpg/220px-Comethrough.jpg'  
+    },
+    {
+        song_artist: 'T-Pain',
+        song_name: 'I Like Dat',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/93/I_Like_Dat.jpg/220px-I_Like_Dat.jpg'  
+    },
+    {
+        song_artist: 'Mooski',
+        song_name: 'Track Star ',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://production-digtracks-com.s3-ap-northeast-1.amazonaws.com/uploads/cover_art/file/52131/thumb_200_coverart.jpg'  
+    },
+    {
+        song_artist: 'Chris Brown',
+        song_name: 'Baddest',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://m.media-amazon.com/images/I/A1ctEuezf3S._SS500_.jpg'  
+    },
+    {
+        song_artist: '42 Dugg',
+        song_name: '4 Da Gang',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/fe/42_Dugg_Roddy_Ricch_4_Da_Gang.png'  
+    },
+    {
+        song_artist: 'Mario',
+        song_name: "C'mon",
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://img.discogs.com/DmyAFk3gDsG9n4TPdTTlI1K24PQ=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1561839-1579122622-7785.jpeg.jpg'  
+    },
+    {
+        song_artist: 'Doja Cat',
+        song_name: 'Kiss Me More',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b1/Doja_Cat_-_Kiss_Me_More.png'  
+    },
+    {
+        song_artist: 'Coi Leray',
+        song_name: 'No More Parties',
+        genre: 'r&b',
+        mood: 'hype',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/81/Coi_Leray_-_No_More_Parties.png'  
+    },
+    {
+        song_artist: 'Jazmine Sullivan',
+        song_name: 'Girl Like Me',
+        genre: 'r&b',
+        mood: 'sad',
+        cover_url: 'https://static01.nyt.com/images/2021/01/08/arts/07sullivan-review1/07sullivan-review1-mediumSquareAt3X.jpg'  
+    },
+    {
+        song_artist: 'Jack Harlow',
+        song_name: 'INDUSTRY BABY',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://m.media-amazon.com/images/I/81Uj3NtUuhL._SS500_.jpg'  
+    },
+    {
+        song_artist: 'Morray',
+        song_name: 'Quicksand',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/75/Morray_-_Quicksand.png/220px-Morray_-_Quicksand.png'  
+    },
+    {
+        song_artist: 'Meek Mill',
+        song_name: 'Sharing Locations',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://cdn.vox-cdn.com/thumbor/SxBJmsFQtXrHjTUz3QOmXm0OGGA=/1400x788/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/22888850/19fbcf6fed1d989ece54bb799278d68f.999x999x1.png'  
+    },
+    {
+        song_artist: 'Mary J. Blige',
+        song_name: 'Everything',
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://m.media-amazon.com/images/I/71NKenxxYQL._SS500_.jpg'  
+    },
+    {
+        song_artist: 'Donell Jones',
+        song_name: "Feelin' You",
+        genre: 'r&b',
+        mood: 'happy',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b27392964533990f9f209d9033f5'  
+    },
+    {
+        song_artist: 'Khalid',
+        song_name: 'Location',
+        genre: 'r&b',
+        mood: 'chill',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/38/LocationKhalid.png'  
+    },
+    {
+        song_artist: 'MEDUZA',
+        song_name: 'Paradise',
+        genre: 'edm',
+        mood: 'happy',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b8/Meduza_-_Paradise.png'
+    },
+    {
+        song_artist: 'Goodboys',
+        song_name: 'Bongo Cha Cha',
+        genre: 'edm',
+        mood: 'chill',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b273ea16704c34ef469abc5d5bb5'
+    },
+    {
+        song_artist: 'Shouse',
+        song_name: 'Love Tonight',
+        genre: 'edm',
+        mood: 'romantic',
+        cover_url: 'https://img.discogs.com/CEQByyoJ89UhTuydu8EUsv3dEr0=/fit-in/500x500/filters:strip_icc():format(webp):mode_rgb():quality(90)/discogs-images/R-17984125-1616565868-8420.jpeg.jpg'
+    },
+    {
+        song_artist: 'Don Diablo',
+        song_name: 'Cheque',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://geo-media.beatport.com/image_size/1400x1400/269288c8-52b2-4141-975b-c943fbb0f07e.jpg'
+    },
+    {
+        song_artist: 'Besomorph',
+        song_name: 'Chemicals',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b273f1b4ae7fda1f9e7de2b1fd08'
+    },
+    {
+        song_artist: 'ATB',
+        song_name: 'Your Love (9PM)',
+        genre: 'edm',
+        mood: 'romantic',
+        cover_url: 'https://img.discogs.com/gKb9UITW-PERaX8MXvMhNPC20lI=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-16936368-1610704751-1399.jpeg.jpg'
+    },
+    {
+        song_artist: 'BRAN',
+        song_name: 'The Final Countdown',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b27355bd9fffb8f61abc06bfd2fb'
+    },
+    {
+        song_artist: 'FISHER',
+        song_name: 'Just Feels Tight',
+        genre: 'edm',
+        mood: 'romantic',
+        cover_url: 'https://geo-media.beatport.com/image_size/1400x1400/d9f4af47-09e3-4445-a187-064237b9dc39.jpg'
+    },
+    {
+        song_artist: 'MEDUZA',
+        song_name: 'Bad Habits',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://m.media-amazon.com/images/I/61vNza7amPL._SS500_.jpg'
+    },
+    {
+        song_artist: 'Besomorph',
+        song_name: 'Play Pretend',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://static.qobuz.com/images/covers/5a/1k/d2nl8ep1k1k5a_600.jpg'
+    },
+    {
+        song_artist: 'Timmy Trumpet',
+        song_name: 'Friday',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://www.youredm.com/wp-content/uploads/2020/11/123730303_10158563157035943_923986023735896282_o.jpg'
+    },
+    {
+        song_artist: 'Don Diablo',
+        song_name: 'Tears For Later',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://img.discogs.com/oVECsuX7w5Ua7ZZPywaRdsxAtOc=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-19710439-1627889569-5595.jpeg.jpg'
+    },
+    {
+        song_artist: 'Disclosure',
+        song_name: 'In My Arms',
+        genre: 'edm',
+        mood: 'romantic',
+        cover_url: 'https://f4.bcbits.com/img/a0716278418_10.jpg'
+    },
+    {
+        song_artist: 'INNDRIVE',
+        song_name: 'Shake It',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://m.media-amazon.com/images/I/6116ZqTF7lL._SS500_.jpg'
+    },
+    {
+        song_artist: 'Joel Corry',
+        song_name: 'BED',
+        genre: 'edm',
+        mood: 'happy',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/cb/Joel_Corry_-_Bed.png'
+    },
+    {
+        song_artist: 'Tiesto',
+        song_name: 'The Motto',
+        genre: 'edm',
+        mood: 'chill',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b2736b64f7a7e0e7af3d604ab41e'
+    },
+    {
+        song_artist: 'RIELL',
+        song_name: 'Better Off',
+        genre: 'edm',
+        mood: 'sad',
+        cover_url: 'https://i.ytimg.com/vi/c4RYUUNoWQg/maxresdefault.jpg'
+    },
+    {
+        song_artist: 'Basement',
+        song_name: 'NERVO',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://geo-media.beatport.com/image_size/500x500/a16026ac-f04a-47dd-9db0-1c96848766be.jpg'
+    },
+    {
+        song_artist: 'Travis Scott',
+        song_name: 'Goosebumps',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Travis_Scott_-_Goosebumps_%28HVME_Remix%29.png/220px-Travis_Scott_-_Goosebumps_%28HVME_Remix%29.png'
+    },
+    {
+        song_artist: 'twocolors',
+        song_name: 'Lovefool',
+        genre: 'edm',
+        mood: 'romantic',
+        cover_url: 'https://m.media-amazon.com/images/I/81Owr7xBShL._SS500_.jpg'
+    },
+    {
+        song_artist: 'Westend',
+        song_name: 'Get This PArty Started',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://m.media-amazon.com/images/I/61pCAinPiqS._SS500_.jpg'
+    },
+    {
+        song_artist: 'Regard',
+        song_name: 'You',
+        genre: 'edm',
+        mood: 'romantic',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Regard%2C_Troye_Sivan_and_Tate_McRae_-_You.png/220px-Regard%2C_Troye_Sivan_and_Tate_McRae_-_You.png'
+    },
+    {
+        song_artist: 'Martin Ikin',
+        song_name: 'Sometimes',
+        genre: 'edm',
+        mood: 'chill',
+        cover_url: 'https://geo-media.beatport.com/image_size/1400x1400/b463cfb7-a3a5-45df-9b4a-f856cec99eb4.jpg'
+    },
+    {
+        song_artist: 'RIELL',
+        song_name: 'Lie To Me',
+        genre: 'edm',
+        mood: 'chill',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b27374895778156e2bd879a31291'
+    },
+    {
+        song_artist: 'HEAT',
+        song_name: 'Paul Woolford',
+        genre: 'edm',
+        mood: 'hype',
+        cover_url: 'https://i.scdn.co/image/ab67616d00001e020bf60aac252d62c7834da28c'
+    },
+  {
     song_artist: 'Led Zeppelin',
     song_name: 'Stairway to Heaven',
     genre: 'rock',
