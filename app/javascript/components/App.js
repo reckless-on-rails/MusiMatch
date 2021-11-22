@@ -16,6 +16,7 @@ class App extends React.Component {
         <Header {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/songindex" component={()=><Songs songs={this.props.songs}/>} />
         </Switch>
         <Footer />
       </BrowserRouter>
