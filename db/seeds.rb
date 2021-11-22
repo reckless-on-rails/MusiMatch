@@ -5,7 +5,882 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-tracks = [
+songs = [
+  {
+        song_artist: 'Pink Floyd',
+        song_name: 'Anothother Brick wall (part 2)',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://townsquare.media/site/295/files/2020/03/Floyd.jpg?w=980&q=75',
+    },
+    {
+        song_artist: 'Barbra Streisand',
+        song_name: 'A Woman in Love',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://sacharts.files.wordpress.com/2019/04/woman_in_love_barbra_streisand.jpeg',  
+    },
+    {
+        song_artist: 'USA For Africa',
+        song_name: 'We Are the World',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://www.soultracks.com/files/stories2/we_are_the_world.jpg',  
+    },
+    {
+        song_artist: 'A-Ha',
+        song_name: 'Take On Me',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://static.onecms.io/wp-content/uploads/sites/6/2015/10/a-ha-take-on-me.jpg',  
+    },
+    {
+        song_artist: 'Prince',
+        song_name: 'Kiss',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://f4.bcbits.com/img/a0341373443_10.jpg',  
+    },
+    {
+        song_artist: 'Madonna',
+        song_name: "Papa Dont Preach",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://static.stereogum.com/uploads/2020/12/Madonna-Papa-Dont-Preach-1608583222.jpg',  
+    },
+    {
+        song_artist: 'Whitney Houston',
+        song_name: 'I Wanna Dance With Somebody (Who Loves Me)',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Whitney_Houston_-_I_Wanna_Dance_with_Somebody.jpg/220px-Whitney_Houston_-_I_Wanna_Dance_with_Somebody.jpg',  
+    },
+    {
+        song_artist: 'Rick Astley',
+        song_name: 'Never Gonna Give You Up',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/34/RickAstleyNeverGonnaGiveYouUp7InchSingleCover.jpg/220px-RickAstleyNeverGonnaGiveYouUp7InchSingleCover.jpg',  
+    },
+    {
+        song_artist: 'Phil Collins',
+        song_name: 'A Groovy Kind of Love',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://static.stereogum.com/uploads/2021/05/Phil-Collins-A-Groovy-Kind-Of-Love-1622230105.jpeg',  
+    },
+    {
+        song_artist: "Guns n' Roses",
+        song_name: "Sweet Child O' Mine",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://m.media-amazon.com/images/M/MV5BMTU0OGY4NTgtZDU5Yy00NTAxLWI5MGYtZDUyNGI2YTMzNDVkXkEyXkFqcGdeQXVyNDE4OTY5NzI@._V1_.jpg',  
+    },
+    {
+        song_artist: 'Madonna',
+        song_name: 'Like a Prayer',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://m.media-amazon.com/images/I/71WJtJ0Y3aL._SL1420_.jpg',  
+    },
+    {
+        song_artist: 'Phil Collins',
+        song_name: 'Another Day in Paradise',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Phil_Collins_AnotherDayInParadise.jpg/220px-Phil_Collins_AnotherDayInParadise.jpg',  
+    },
+    {
+        song_artist: 'Michael Jackson',
+        song_name: "They Don't Care About Us",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/d5/Mjtdcau.jpg',  
+    },
+    {
+        song_artist: 'Vanilla Ice',
+        song_name: 'Ice Ice Baby',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://m.media-amazon.com/images/M/MV5BZjEyNzk2ZDgtOWJkNC00OGMyLTgzMDQtNmMwY2E1MzE5Mjk4XkEyXkFqcGdeQXVyNDE4OTY5NzI@._V1_.jpg',  
+    },
+    {
+        song_artist: 'Bryan Adams',
+        song_name: '(Everything I Do) I Do it For You',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/09/Everythingido_Idoitforyou.png',  
+    },
+    {
+        song_artist: 'Michael Jackson',
+        song_name: 'Black Or White',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/48/Michael_Jackson_-_Black_or_White.png',  
+    },
+    {
+        song_artist: 'Whitney Houston',
+        song_name: 'I Will Always Love You',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b2/The_Best_of_Whitney_Houston.jpg',  
+    },
+    {
+        song_artist: 'Nirvana',
+        song_name: 'Smells Like Teen Spirit',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://images.genius.com/a0d21db03b81d9e710445d28dc6bd918.1000x1000x1.png',  
+    },
+    {
+        song_artist: 'Rednex',
+        song_name: 'Cotton Eye Joe',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/de/RednexCottonEyeJoeCDSingleCover.jpg',  
+    },
+    {
+        song_artist: 'Sarah McLachlan',
+        song_name: "I Will Remember You",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://m.media-amazon.com/images/I/41KhzPlw2EL.jpg',  
+    },
+    {
+        song_artist: 'TLC',
+        song_name: 'Waterfalls',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/85/Waterfalls_by_TLC_US_CD_maxi-single.jpg',  
+    },
+    {
+        song_artist: 'Seal',
+        song_name: 'Kiss From a Rose',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://images-na.ssl-images-amazon.com/images/I/8196Anvj8hL.jpg',  
+    },
+    {
+        song_artist: 'Spice Girls',
+        song_name: 'Wannabe',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://i1.sndcdn.com/artworks-000219487416-9f748a-t500x500.jpg',  
+    },
+    {
+        song_artist: 'Puff Daddy',
+        song_name: "I'll Be Missing You",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://m.media-amazon.com/images/I/81BUXPndfdL._SL1471_.jpg',  
+    },
+    {
+        song_artist: 'R Kelly',
+        song_name: 'I Believe I Can Fly',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c6/IBELIEVEICANFLY.jpg',  
+    },
+    {
+        song_artist: 'Aqua',
+        song_name: 'Barbie Girl',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4c/Aquabarbie.jpg',  
+    },
+    {
+        song_artist: 'Celine Dion',
+        song_name: 'My Heart Will Go On',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/e0/Celine_dion-my_heart_will_go_on_s.jpg',  
+    },
+    {
+        song_artist: 'Cher',
+        song_name: 'Believe',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f6/Believe_%28Cher_album_-_cover_art%29.jpg',  
+    },
+    {
+        song_artist: 'Britney Spears',
+        song_name: 'Baby One More Time',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/9a/..._Baby_One_More_Time_%28album%29.png',  
+    },
+    {
+        song_artist: 'The Backstreet Boys',
+        song_name: 'I Want it That Way',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b9/Iwantitthatwaycd.jpg',  
+    },
+    {
+        song_artist: 'Ricky Martin',
+        song_name: "Livin' La Vida Loca",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/ed/Livin%27_la_vida_loca_cover.png',  
+    },
+    {
+        song_artist: 'Britney Spears',
+        song_name: 'Oops!... I Did it Again',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/46/Oops%21..._I_Did_It_Again.png',  
+    },
+    {
+        song_artist: "Destiny's Child",
+        song_name: 'Say My Name',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://m.media-amazon.com/images/M/MV5BNWVkMWY2MjMtNzY0NC00ZDJlLThiMGUtN2FlNTE1YTk0YjhmXkEyXkFqcGdeQXVyNDE4OTY5NzI@._V1_.jpg',  
+    },
+    {
+        song_artist: 'Baha Men',
+        song_name: 'Who Let the Dogs Out?',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/15/Baha_Men_-_Dogs_single.png',  
+    },
+    {
+        song_artist: "Destiny's Child",
+        song_name: 'Survivor',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/99/Destiny%27s_Child_%E2%80%93_Survivor.jpg',  
+    },
+    {
+        song_artist: 'OutKast',
+        song_name: 'Hey Ya!',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/e4/OutkastHeyYa.jpg',  
+    },
+    {
+        song_artist: 'Beyonce',
+        song_name: 'Crazy in Love',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Beyonce_-_Crazy_in_Love_%28single%29.png/220px-Beyonce_-_Crazy_in_Love_%28single%29.png',  
+    },
+    {
+        song_artist: 'R Kelly',
+        song_name: 'Ignition',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://images.genius.com/c23c7ad166aff9317b7dbbc35ffe83db.1000x1000x1.jpg',  
+    },
+    {
+        song_artist: 'The White Stripes',
+        song_name: '7 Nation Army',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://third-man-records.imgix.net/887fef76-fa3e-48c2-937e-1413fde7b21c/TMR_725_TWS_GlitchMob_SevenNationArmy_7remix_front.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=0%2C0%2C3000%2C3000',  
+    },
+    {
+        song_artist: 'Linkin Park',
+        song_name: 'Numb',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Linkin_Park_-_Numb_CD_cover.jpg/220px-Linkin_Park_-_Numb_CD_cover.jpg',  
+    },
+    {
+        song_artist: 'Fountains of Wayne',
+        song_name: "Stacy's Mom",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/8b/Stacy%27s_Mom_%28album%29.jpg',  
+    },
+    {
+        song_artist: 'Usher',
+        song_name: 'Yeah!',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/2e/Usher-yeah.jpg',  
+    },
+    {
+        song_artist: 'Britney Spears',
+        song_name: 'Toxic',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/21/Britney_Spears_Toxic.png',  
+    },
+    {
+        song_artist: "Destiny's Child",
+        song_name: 'Lose My Breath',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b1/Love_My_Breath_single_cover.jpg',  
+    },
+    {
+        song_artist: 'Maroon 5',
+        song_name: 'She Will Be Loved',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/1b/She_Will_be_Loved_cover.png',  
+    },
+    {
+        song_artist: 'Usher',
+        song_name: 'My Boo',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Usher_and_Alicia_Keys_-_My_Boo_-_CD_cover.jpg/220px-Usher_and_Alicia_Keys_-_My_Boo_-_CD_cover.jpg',  
+    },
+    {
+        song_artist: 'Green Day',
+        song_name: 'Boulevard of Broken Dreams',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Green_Day_-_Boulevard_of_Broken_Dreams_cover.jpg/220px-Green_Day_-_Boulevard_of_Broken_Dreams_cover.jpg',  
+    },
+    {
+        song_artist: 'The Pussycat Dolls',
+        song_name: "Don't Cha",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/Don%27t_Cha.png/220px-Don%27t_Cha.png',  
+    },
+    {
+        song_artist: 'Kelly Clarkson',
+        song_name: 'Since U Been Gone',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/da/Since_U_Been_Gone_Single.PNG',  
+    },
+    {
+        song_artist: 'Shakira',
+        song_name: "Hips don't lie",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/Shakira-HipsDon%27tLie.jpg/220px-Shakira-HipsDon%27tLie.jpg',  
+    },
+    {
+        song_artist: 'Justin Timberlake',
+        song_name: 'Sexyback',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/28/SexyBack.png',  
+    },
+    {
+        song_artist: 'Hinder',
+        song_name: 'Lips of An Angel',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Lipsofanangel.jpg/220px-Lipsofanangel.jpg',  
+    },
+    {
+        song_artist: 'Panic! At the Disco',
+        song_name: 'I Write Sins Not Tragedies',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/16/Panic%21_at_the_Disco_-_I_Write_Sins_Not_Tragedies.png',  
+    },
+    {
+        song_artist: 'Rihanna',
+        song_name: 'Umbrella',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/01/Rihanna_-_Umbrella.png',  
+    },
+    {
+        song_artist: 'Fergie',
+        song_name: "Big Girls Don't Cry",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/55/Fergie_-_Big_Girls_Don%27t_Cry.png',  
+    },
+    {
+        song_artist: 'Sean Kingston',
+        song_name: 'Beautiful Girls',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f6/Sean_Kingston_Beautiful_Girls.jpg',  
+    },
+    {
+        song_artist: 'Avril Lavigne',
+        song_name: 'Girlfriend',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/3b/Avril_Lavigne_-_Girlfriend.png',  
+    },
+    {
+        song_artist: 'OneRepublic',
+        song_name: 'Apologize',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4f/ApologizeiTunesCover.PNG',  
+    },
+    {
+        song_artist: 'Rihanna',
+        song_name: "Don't Stop the Music",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/26/Don%27t_Stop_the_Music_Single.PNG',  
+    },
+    {
+        song_artist: "Plain White T's",
+        song_name: 'Hey There Delilah',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/15/Hey_There_Delilah_%282006_Plain_White_T%27s_single%29.jpg',  
+    },
+    {
+        song_artist: 'The Fray',
+        song_name: 'How to Save a Life',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/7c/The_Fray_-_How_to_Save_a_Life.jpg',  
+    },
+    {
+        song_artist: 'Katy Perry',
+        song_name: 'I Kissed A Girl',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/5c/I_Kissed_a_Girl.png',  
+    },
+    {
+        song_artist: 'Estelle',
+        song_name: 'American Boy',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/0d/American_Boy_UK_Cover.jpg',  
+    },
+    {
+        song_artist: 'Kings of Leon',
+        song_name: 'Sex on Fire',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/SexOnFire.jpg/220px-SexOnFire.jpg',  
+    },
+    {
+        song_artist: 'Jonas Brothers',
+        song_name: 'Burning Up',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Burnin%27_Up_Single_Cover.JPG/220px-Burnin%27_Up_Single_Cover.JPG',  
+    },
+    {
+        song_artist: 'Lady GaGa',
+        song_name: 'Poker Face',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/3a/Poker_Face_by_Lady_Gaga_alternative_cover.png',  
+    },
+    {
+        song_artist: 'The Black Eyed Peas',
+        song_name: 'I Gotta Feeling',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f4/I_Gotta_Feeling.png',  
+    },
+    {
+        song_artist: 'Ke$ha',
+        song_name: 'Tik-Toc',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/7e/TiK_ToK_-_Kesha_%28official_single_cover%29.JPG',  
+    },
+    {
+        song_artist: 'Beyonce',
+        song_name: 'Single Ladies (Put A Ring On It)',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/44/Single_Ladies_%28Put_a_Ring_on_It%29_cover.png',  
+    },
+    {
+        song_artist: 'Kings of Leon',
+        song_name: 'Use Somebody',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/a/a0/Use_Somebody.jpg',  
+    },
+    {
+        song_artist: 'Taylor Swift',
+        song_name: 'Love Story',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/01/Taylor_Swift_-_Love_Story.png',  
+    },
+    {
+        song_artist: 'All-American Rejects',
+        song_name: 'Gives You Hell',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Givesyouhellcover.jpg/220px-Givesyouhellcover.jpg',  
+    },
+    {
+        song_artist: 'Britney Spears',
+        song_name: 'Circus',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Circus-_Album.png/220px-Circus-_Album.png',  
+    },
+    {
+        song_artist: 'Bruno Mars',
+        song_name: 'Just the Way You Are',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/fa/Bruno-mars-just-the-way-you-are.jpg',  
+    },
+    {
+        song_artist: 'Taio Cruz',
+        song_name: 'Dynamite',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/3e/Taio_Cruz_-_Dynamite_%28Official_Single_Cover%29.jpg',  
+    },
+    {
+        song_artist: 'B.o.B',
+        song_name: 'Airplanes',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/fe/B.o.B_-_Airplanes.jpg',  
+    },
+    {
+        song_artist: 'Bruno Mars',
+        song_name: 'Grenade',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/36/BrunoMarsGrenade.jpg',  
+    },
+    {
+        song_artist: 'Adele',
+        song_name: 'Rolling In The Deep',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/74/Adele_-_Rolling_in_the_Deep.png',  
+    },
+    {
+        song_artist: 'Maroon 5',
+        song_name: 'Moves Like Jagger',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/fc/Maroon_5_Moves_Like_Jagger_cover.png',  
+    },
+    {
+        song_artist: 'Gotye',
+        song_name: 'Somebody That I Used to Know',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://i.scdn.co/image/ab67616d0000b273e1d47c00ddecbfb810c807ed',  
+    },
+    {
+        song_artist: 'Maroon 5',
+        song_name: 'One More Night',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/28/Maroon_5_One_More_Night_cover.png',  
+    },
+    {
+        song_artist: 'Lorde',
+        song_name: 'Royals',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/d3/Lorde_-_Royals.png',  
+    },
+    {
+        song_artist: 'Pharrell Williams',
+        song_name: 'Happy',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/23/Pharrell_Williams_-_Happy.jpg',  
+    },
+    {
+        song_artist: 'Daft Punk',
+        song_name: 'Get Lucky',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/71/Get_Lucky.jpg',  
+    },
+    {
+        song_artist: 'Magic!',
+        song_name: 'Rude',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/e7/Magic%21_-_Rude.png',  
+    },
+    {
+        song_artist: 'Taylor Swift',
+        song_name: 'Shake It Off',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c4/Taylor_Swift_-_Shake_It_Off.png',  
+    },
+    {
+        song_artist: 'Mark Ronson',
+        song_name: 'Uptown Funk!',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/a/a7/Mark_Ronson_-_Uptown_Funk_%28feat._Bruno_Mars%29_%28Official_Single_Cover%29.png',  
+    },
+    {
+        song_artist: 'Sam Smith',
+        song_name: "I'm Not the Only One",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/cd/Sam_Smith_-_I%27m_Not_the_Only_One.png',  
+    },
+    {
+        song_artist: 'Hozier',
+        song_name: 'Take Me to Church',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/e5/Hozier_Take_Me_to_Church.jpg',  
+    },
+    {
+        song_artist: 'Rihanna',
+        song_name: 'Work',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/32/Rihanna_-_Anti.png',  
+    },
+    {
+        song_artist: 'Alan Walker',
+        song_name: 'Faded',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/da/Alan_Walker_-_Faded.png',  
+    },
+    {
+        song_artist: 'Adele',
+        song_name: 'Hello',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/85/Adele_-_Hello_%28Official_Single_Cover%29.png',  
+    },
+    {
+        song_artist: 'Ed Sheeran',
+        song_name: 'Shape Of You',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://charts-static.billboard.com/img/2017/01/ed-sheeran-w3r-shape-of-you-rjz-180x180.jpg',  
+    },
+    {
+        song_artist: 'Bruno Mars',
+        song_name: "That's What I Like",
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://charts-static.billboard.com/img/2016/12/bruno-mars-va7-thats-what-i-like-hq0-180x180.jpg',  
+    },
+    {
+        song_artist: 'Ed Sheeran',
+        song_name: 'Perfect',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://charts-static.billboard.com/img/2011/07/ed-sheeran-w3r-180x180.jpg',  
+    },
+    {
+        song_artist: 'Camila Cabello',
+        song_name: 'Havana',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://charts-static.billboard.com/img/2016/11/camila-cabello-180x180.jpg',  
+    },
+    {
+        song_artist: 'Bad Guy',
+        song_name: 'Billie Eilish',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://charts-static.billboard.com/img/2019/04/billie-eilish-lrt-bad-guy-7mt-180x180.jpg',  
+    },
+    {
+        song_artist: 'Panic! At The Disco',
+        song_name: 'High Hopes',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/82/High_Hopes_%28White_Panda_Remix%29.jpg',  
+    },
+    {
+        song_artist: 'Doja Cat',
+        song_name: 'Say So',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://charts-static.billboard.com/img/2019/12/doja-cat-lm6-say-so-z1g-180x180.jpg',  
+    },
+    {
+        song_artist: 'Harry Styles', 
+        song_name: 'Watermelon Sugar',
+        genre: 'pop',
+        mood: '',
+        cover_url: 'https://charts-static.billboard.com/img/2019/11/harry-styles-bma-watermelon-sugar-nys-180x180.jpg',  
+    },
+    {
+        song_artist: 'Luke Combs',
+        song_name: 'Beautiful Crazy',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Beautiful_Crazy.jpg/220px-Beautiful_Crazy.jpg',  
+    },
+    {
+        song_artist: 'Zac Brown Band',
+        song_name: 'Chicken Fried',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Chicken_Fried_Zac_Brown_Band.jpg/220px-Chicken_Fried_Zac_Brown_Band.jpg',  
+    },
+    {
+        song_artist: 'Tim McGraw',
+        song_name: 'Humble and Kind',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c3/HumbleandKind.jpg',  
+    },
+    {
+        song_artist: 'Luke Bryan',
+        song_name: 'Country Girl (Shake It For Me)',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/db/Luke-Bryan-2011-300-01.png',  
+    },
+    {
+        song_artist: 'Lady A',
+        song_name: 'Need You Now',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Need_You_Now_album_cover.jpg/220px-Need_You_Now_album_cover.jpg',  
+    },
+    {
+        song_artist: 'Josh Turner',
+        song_name: 'Your Man',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4b/Yourmancover.jpg',  
+    },
+    {
+        song_artist: 'John Denver',
+        song_name: 'Take Me Home, Country Roads',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://cdns-images.dzcdn.net/images/cover/31383f3d2c444ca382c19c1def301e95/350x350.jpg',  
+    },
+    {
+        song_artist: 'Jason Aldean',
+        song_name: 'Big Green Tractor',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Aldeanalbum.jpg/220px-Aldeanalbum.jpg',  
+    },
+    {
+        song_artist: 'Jason Aldean',
+        song_name: 'Dirt Road Anthem',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/47/DirtRoadAnthem.png',  
+    },
+    {
+        song_artist: 'Florda Georgia Line',
+        song_name: 'This Is How We Roll',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Florida_Georgia_Line_-_This_Is_How_We_Roll_Remix_%28feat._Luke_Bryan_and_Jason_Derulo%29_%28Official_Single_Cover%29.png/220px-Florida_Georgia_Line_-_This_Is_How_We_Roll_Remix_%28feat._Luke_Bryan_and_Jason_Derulo%29_%28Official_Single_Cover%29.png',  
+    },
+    {
+        song_artist: 'Eric Church',
+        song_name: 'Springsteeen',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://m.media-amazon.com/images/I/71ZpUlvvYdL._SL1060_.jpg',  
+    },
+    {
+        song_artist: 'Blake Shelton',
+        song_name: 'Honey Bee',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/e4/Blake_Shelton_-_Honey_Bee_Lyrics.jpg',  
+    },
+    {
+        song_artist: 'Blake Shelton',
+        song_name: "God's Country",
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b2/Blake_Shelton_-_God%27s_Country.png',  
+    },
+    {
+        song_artist: 'Billy Ray Cyrus',
+        song_name: 'Achy Breaky Heart',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Achy_Breaky_Heart.jpg/220px-Achy_Breaky_Heart.jpg',  
+    },
+    {
+        song_artist: 'Taylor Swift',
+        song_name: 'Our Song',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4e/Taylor_Swift_-_Our_Song.png',  
+    },
+    {
+        song_artist: 'Johnny Cash',
+        song_name: 'A Boy Named Sue',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://e.snmc.io/i/1200/s/075a3f4253e8ffe7b83b0b8e6a69413f/3073638',  
+    },
+    {
+        song_artist: 'dolly parton',
+        song_name: 'Jolene',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/a/ab/Jolene_%28Dolly_Parton_album_-_cover_art%29.jpg',  
+    },
+    {
+        song_artist: 'George Strait',
+        song_name: "All My Ex's Live in Texas",
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/8/83/All_My_Ex%27s_Live_in_Texas_-_George_Strait.jpg',  
+    },
+    {
+        song_artist: 'Waylon Jennings',
+        song_name: "Mammas, Don't Let Your Babies Grow Up to Be Cowboys",
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://m.media-amazon.com/images/I/71KSpmePiUL._SS500_.jpg',  
+    },
+    {
+        song_artist: 'Johnny Cash',
+        song_name: 'I Walk the Line',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://m.media-amazon.com/images/I/515adtJ4HbL.jpg',  
+    },
+    {
+        song_artist: 'The Band Perry',
+        song_name: 'If I Die Young',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/78/Thebandperry_-_Ifidieyoung.jpg',  
+    },
+    {
+        song_artist: 'Toby Keith',
+        song_name: 'Red Solo Cup',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://img.discogs.com/seo77mev6jBsZ7SxOkoxgyMZXMg=/fit-in/600x593/filters:strip_icc():format(webp):mode_rgb():quality(90)/discogs-images/R-13456610-1554566109-9521.jpeg.jpg',  
+    },
+    {
+        song_artist: 'Florda Gerogia Line',
+        song_name: 'Cruise',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/14/Cruise_Florida_Georgia_Line.jpg',  
+    },
+    {
+        song_artist: 'Khalid',
+        song_name: 'Saturday Nights Remix',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://express-images.franklymedia.com/6616/sites/380/2019/01/11121956/Khalid-Kane-Brown-Remix-YouTube.jpg',  
+    },
+    {
+        song_artist: 'Lil Nas X',
+        song_name: 'Old Town Road (feat. Billy Ray Cyrus)',
+        genre: 'country',
+        mood: '',
+        cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/1c/Old_Town_Road_cover.jpg',  
+    },
   {
         song_artist: 'Babyface',
         song_name: 'When Can I See You',
@@ -1615,7 +2490,7 @@ tracks = [
     genre: 'alternative',
     mood: 'happy',
     cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/ed/Green_Day_-_American_Idiot_album_cover.png'
-  },105
+  },
   {
     song_artist: 'Green Day',
     song_name: 'Basket Case',
@@ -1755,15 +2630,12 @@ tracks = [
     genre: 'alternative',
     mood: 'happy',
     cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b6/Broken_Boy_Soldiers.jpg'
-  }
-  
-const rap =
-    [
-
+  },
 {
 
 song_artist:'Kris Kross' ,
 song_name: 'Jump',
+genre: 'rap',
 mood: 'hype',
 cover_url: 'https://i.scdn.co/image/ab67616d0000b2731ffe5d4aa25c7bd1b1fc4847',
 
@@ -1772,6 +2644,7 @@ cover_url: 'https://i.scdn.co/image/ab67616d0000b2731ffe5d4aa25c7bd1b1fc4847',
 
 song_artist: '2Pac',
 song_name: 'California Love',
+genre: 'rap',
 mood: 'hype',
 cover_url: 'https://media.musicarts.com/is/image/MMGS7/K55102000000000-00-600x600.jpg',
 
@@ -1780,6 +2653,7 @@ cover_url: 'https://media.musicarts.com/is/image/MMGS7/K55102000000000-00-600x60
 
 song_artist:'The Notorious B.I.G.',
 song_name: 'Hypnotize',
+genre: 'rap',
 mood: 'hype',
 cover_url: 'https://images-na.ssl-images-amazon.com/images/I/5140ji0ZM5L._SX300_SY300_QL70_ML2_.jpg',
 
@@ -1788,6 +2662,7 @@ cover_url: 'https://images-na.ssl-images-amazon.com/images/I/5140ji0ZM5L._SX300_
 
 song_artist: 'LL Cool J',
 song_name: 'Mama Said Knock You Out',
+genre: 'rap',
 mood: 'hype',
 cover_url: 'https://m.media-amazon.com/images/I/71urEnnHpKL._SL1080_.jpg',
 
@@ -1795,6 +2670,7 @@ cover_url: 'https://m.media-amazon.com/images/I/71urEnnHpKL._SL1080_.jpg',
 {
 song_artist: 'DJ Jazzy Jeff & The Fresh Prince ',
 song_name: 'Summertime',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://img.discogs.com/R3fJLZnH-3xEUk91mQmvM1-EbMQ=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-495878-1401537722-6725.jpeg.jpg',
 
@@ -1803,6 +2679,7 @@ cover_url:'https://img.discogs.com/R3fJLZnH-3xEUk91mQmvM1-EbMQ=/fit-in/300x300/f
 
 song_artist: 'Dr. Dre',
 song_name: "Nuthin' but a 'G' Thang",
+genre: 'rap',
 mood:'chill',
 cover_url:'https://m.media-amazon.com/images/I/51Zz4aFj5kL.jpg',
 
@@ -1811,6 +2688,7 @@ cover_url:'https://m.media-amazon.com/images/I/51Zz4aFj5kL.jpg',
 
 song_artist: 'Cypress Hill',
 song_name: 'Insane in the Brain',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/b/ba/Cypress_Hill-Black_Sunday.jpg',
 
@@ -1819,6 +2697,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/b/ba/Cypress_Hill-Black_Sun
 
 song_artist: 'Snoop Doggy Dogg',
 song_name: 'Gin and Juice',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/6/63/SnoopDoggyDoggDoggystyle.jpg',
 
@@ -1827,6 +2706,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/6/63/SnoopDoggyDoggDoggysty
 
 song_artist: 'Warren G',
 song_name: 'Regulate',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/9/92/Above_the_Rim_Sndtrck.jpg',
 
@@ -1835,6 +2715,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/9/92/Above_the_Rim_Sndtrck.
     
 song_artist: 'Coolio',
 song_name: "Gangsta's Paradise",
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c6/Gangsta%27s_paradise.jpg',
 
@@ -1843,6 +2724,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c6/Gangsta%27s_paradise.j
 
 song_artist: 'Black Sheep',
 song_name: 'The Choice Is Yours',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/4/47/Awolfinsheepsclothing.jpg',
 
@@ -1851,6 +2733,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/4/47/Awolfinsheepsclothing.
 
 song_artist: 'Ice Cube',
 song_name: 'It Was a Good DAy',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/8/8e/Ice_Cube_-_The_Predator_-_Album_Cover.jpg',
 
@@ -1859,6 +2742,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/8/8e/Ice_Cube_-_The_Predato
 
 song_artist: 'Busta Rhymes',
 song_name: 'Woo Hah!! Got You All in Check',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/0/0e/Busta-coming.jpg',
 
@@ -1867,6 +2751,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/0/0e/Busta-coming.jpg',
 
 song_artist: 'OutKast',
 song_name: 'Elevators/ Me and You',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c6/Outkast-atliens.jpg',
 
@@ -1875,6 +2760,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c6/Outkast-atliens.jpg',
 
 song_artist: 'Puff Daddy',
 song_name: "Can't Nobody Hold Me Down",
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/5/5b/No_Way_Out_-_Puff_Daddy.jpg',
 
@@ -1883,6 +2769,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/5/5b/No_Way_Out_-_Puff_Dadd
 
 song_artist: 'The Notorious B.I.G.',
 song_name: 'Mo Money Mo Problems',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/1/1c/NotoriousB.I.G.LifeAfterDeath.jpg',
 
@@ -1891,6 +2778,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/1/1c/NotoriousB.I.G.LifeAft
 
 song_artist: 'Noreaga',
 song_name: 'Superthug (What What)',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/8/89/N.O.R.E._%28album%29.jpg',
 
@@ -1899,6 +2787,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/8/89/N.O.R.E._%28album%29.j
 
 song_artist: 'Busta Rhymes',
 song_name: 'Whats it Gonna Be',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/7/7c/Busta-ELE.jpg',
 
@@ -1907,6 +2796,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/7/7c/Busta-ELE.jpg',
 
 song_artist: 'Missy Elliott',
 song_name: 'Hot Boyz',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/d/de/Missy_Elliott_-_Da_Real_World_-_Album.jpg',
 
@@ -1915,6 +2805,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/d/de/Missy_Elliott_-_Da_Rea
 
 song_artist: 'Ying Yang Twins',
 song_name: 'Whistle While You Twurk',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/3/31/ThugWalkin.jpg',
 
@@ -1923,6 +2814,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/3/31/ThugWalkin.jpg',
 
 song_artist: 'Nelly',
 song_name: 'Country Grammar (Hot Shit)',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/4/4e/Country_Grammar.jpg',
 
@@ -1931,6 +2823,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/4/4e/Country_Grammar.jpg',
 
 song_artist: 'OutKast',
 song_name: 'Ms. Jackson',
+genre: 'rap',
 mood:'happy',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/0/0b/OutKast_-_Stankonia.JPG',
 
@@ -1939,6 +2832,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/0/0b/OutKast_-_Stankonia.JP
 
 song_artist: 'D12',
 song_name: 'Purple Pills',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/6/6e/Devil%27s_Night.jpg',
 
@@ -1947,6 +2841,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/6/6e/Devil%27s_Night.jpg',
 
 song_artist: 'Nelly',
 song_name: 'Hot in Herre',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/9/9c/Nelly_-_Nellyville_-_Album.jpg',
 
@@ -1955,6 +2850,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/9/9c/Nelly_-_Nellyville_-_A
 
 song_artist: '50 Cent',
 song_name: 'In da Club',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/9/9d/Get_Rich_Or_Die_Tryin%27.JPG',
 
@@ -1963,6 +2859,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/9/9d/Get_Rich_Or_Die_Tryin%
 
 song_artist: 'Lil Kim',
 song_name: 'Magic Stick',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/2/2a/Lil%27_Kim_-_La_Bella_Mafia.png',
 
@@ -1971,6 +2868,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/2/2a/Lil%27_Kim_-_La_Bella_
 
 song_artist: '50 Cent',
 song_name: 'P.I.M.P',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/9/9d/Get_Rich_Or_Die_Tryin%27.JPG',
 
@@ -1979,6 +2877,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/9/9d/Get_Rich_Or_Die_Tryin%
 
 song_artist: 'Lil Jon & The Eastside Boyz',
 song_name: 'Get Low',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/6/67/KingsOfCrunk.jpg',
 
@@ -1987,6 +2886,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/6/67/KingsOfCrunk.jpg',
 
 song_artist: 'Youngbloodz',
 song_name: 'Get Low',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/6/67/KingsOfCrunk.jpg',
 
@@ -1995,6 +2895,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/6/67/KingsOfCrunk.jpg',
 
 song_artist: 'Twista',
 song_name: 'Slow Jamz',
+genre: 'rap',
 mood:'romantic',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/7/72/Twista_featuring_Kanye_West_and_Jamie_Foxx_-_Slow_Jamz_-_CD_single_cover.jpg',
 
@@ -2003,6 +2904,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/7/72/Twista_featuring_Kanye
 
 song_artist: 'J-Kwon',
 song_name: 'Tipsy',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/d/d0/Jkwon2.jpg',
 
@@ -2011,6 +2913,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/d/d0/Jkwon2.jpg',
 
 song_artist: 'Juvenile',
 song_name: 'Back That Azz Up',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/9/92/Juvenile400Degreez.jpg',
 
@@ -2019,6 +2922,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/9/92/Juvenile400Degreez.jpg
 
 song_artist: 'Terror Squad',
 song_name: 'Lean Back',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/3/39/Terror_Squad_-_True_Story.jpg',
 
@@ -2027,6 +2931,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/3/39/Terror_Squad_-_True_St
 
 song_artist: 'Snoop Dogg',
 song_name: 'Drop it Like Its Hot',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/1/10/R_and_G_%28Rhythm_and_Gangsta%29_The_Masterpiece_%28Snoop_Dog_album%29_coverart.jpg',
 
@@ -2035,6 +2940,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/1/10/R_and_G_%28Rhythm_and_
 
 song_artist: 'Kanye West',
 song_name: 'Gold Digger',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/f/f4/Late_registration_cd_cover.jpg',
 
@@ -2043,6 +2949,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/f/f4/Late_registration_cd_c
 
 song_artist: 'Dem Franchize Boyz',
 song_name: 'Lean wit it, Rock wit it',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/4/46/OnTopOfOurGame.jpg',
 
@@ -2051,6 +2958,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/4/46/OnTopOfOurGame.jpg',
 
 song_artist: 'T.I.',
 song_name: 'What You Know',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/1/10/King_%28album%29.jpg',
 
@@ -2059,6 +2967,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/1/10/King_%28album%29.jpg',
 
 song_artist: 'Yung Joc',
 song_name: 'Its Goin Down',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/a/ab/Yung_Joc_New_Joc_City.jpg',
 
@@ -2067,6 +2976,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/a/ab/Yung_Joc_New_Joc_City.
 
 song_artist: 'Young Dro',
 song_name: 'Shoulder Lean',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/a/a1/YoungDroBestThangSmokin.jpg',
 
@@ -2075,6 +2985,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/a/a1/YoungDroBestThangSmoki
 
 song_artist: 'Bow Wow',
 song_name: 'Shortie Like Mine',
+genre: 'rap',
 mood:'romantic',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/f/f7/Bow_Wow_-_The_Price_Of_Fame_cover.jpg',
 
@@ -2083,6 +2994,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/f/f7/Bow_Wow_-_The_Price_Of
 
 song_artist: 'Jim Jones',
 song_name: 'We Fly High (Ballin)',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/5/58/Hustler%27s_P.O.M.E._%28Product_of_My_Environment%29.jpg',
 
@@ -2091,6 +3003,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/5/58/Hustler%27s_P.O.M.E._%
 
 song_artist: 'Mims',
 song_name: 'This Is Why Im Hot',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c2/Music_is_my_Savior-Mims.jpg',
 
@@ -2099,6 +3012,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c2/Music_is_my_Savior-Mim
 
 song_artist: 'Shop Boyz',
 song_name: 'Party Like a Rockstar',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/2/22/RockstarMentality.JPG',
 
@@ -2107,6 +3021,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/2/22/RockstarMentality.JPG'
 
 song_artist: 'Fabolous',
 song_name: 'Make Me Better',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/e/e2/FromNothinToSomethin.jpg',
 
@@ -2115,6 +3030,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/e/e2/FromNothinToSomethin.j
 
 song_artist: 'Plies',
 song_name: 'Shawty',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/d/d3/Plies_-_The_Real_Testament.png',
 
@@ -2123,6 +3039,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/d/d3/Plies_-_The_Real_Testa
 
 song_artist: 'Soulja Boy',
 song_name: 'Crank That (Soulja Boy)',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/6/69/Souljaboytellemdotcom.jpg',
 
@@ -2131,6 +3048,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/6/69/Souljaboytellemdotcom.
 
 song_artist: 'Flo Rida',
 song_name: 'Low',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/8/87/Flo-rida-mail-on-sunday.jpg',
 
@@ -2139,6 +3057,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/8/87/Flo-rida-mail-on-sunda
 
 song_artist: 'Lil Wayne',
 song_name: 'Lollipop',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c8/CarterIII.jpg',
 
@@ -2147,6 +3066,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c8/CarterIII.jpg',
 
 song_artist: 'Young Jeezy',
 song_name: 'Put On',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/f/f8/Young_Jeezy_-_The_Recession.jpg',
 
@@ -2155,6 +3075,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/f/f8/Young_Jeezy_-_The_Rece
 
 song_artist: 'T.I.',
 song_name: 'Whatever You Like',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/9/99/T.I._Papertrail.jpg',
 
@@ -2163,6 +3084,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/9/99/T.I._Papertrail.jpg',
 
 song_artist: 'Jay-Z',
 song_name: 'Empire State Of Mind',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/b/bb/Jay-Z_-_The_Blueprint_3.jpg',
 
@@ -2171,6 +3093,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/b/bb/Jay-Z_-_The_Blueprint_
 
 song_artist: 'Eminem',
 song_name: 'Love The Way You Lie',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/6/60/Recovery_Album_Cover.jpg',
 
@@ -2179,6 +3102,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/6/60/Recovery_Album_Cover.j
 
 song_artist: 'Rick Ross',
 song_name: 'Aston Martin Music',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/4/46/20100603-TEFLONDON.jpg',
 
@@ -2187,6 +3111,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/4/46/20100603-TEFLONDON.jpg
 
 song_artist: 'Drake',
 song_name: 'Fancy',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/9/9c/Drake_-_Thank_Me_Later_cover.jpg',
 
@@ -2195,6 +3120,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/9/9c/Drake_-_Thank_Me_Later
 
 song_artist: 'Wiz Khalifa',
 song_name: 'Black and Yellow',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/1/14/RollingPapers.PNG',
 
@@ -2203,6 +3129,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/1/14/RollingPapers.PNG',
 
 song_artist: 'Nicki Minaj',
 song_name: 'Moment 4 Life',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/f/f1/Pink_Friday_album_cover.jpg',
 
@@ -2211,6 +3138,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/f/f1/Pink_Friday_album_cove
 
 song_artist: 'Kirko Bangz',
 song_name: 'Drank in My Cup',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/1/13/Drank_in_my_cup_by_kirko_bangz.jpeg',
 
@@ -2219,6 +3147,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/1/13/Drank_in_my_cup_by_kir
 
 song_artist: '2 Chainz',
 song_name: 'No Lie',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/0/00/BasedonaTRUStory.jpg',
 
@@ -2227,6 +3156,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/0/00/BasedonaTRUStory.jpg',
 
 song_artist: 'Macklemore',
 song_name: 'Thrift Shop',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/3/3a/The_Heist_cover.png',
 
@@ -2235,6 +3165,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/3/3a/The_Heist_cover.png',
 
 song_artist: 'Bobby Shmurda',
 song_name: 'Hot Boy',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/f/fd/Bobby_Shurmada.jpg',
 
@@ -2243,6 +3174,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/f/fd/Bobby_Shurmada.jpg',
 
 song_artist: 'Big Sean',
 song_name: "I Don't Fuck With You",
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c8/Big_Sean_-_Dark_Sky_Paradise_%28Official_Album_Cover%29.png',
 
@@ -2251,6 +3183,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c8/Big_Sean_-_Dark_Sky_Pa
 
 song_artist: 'Fetty Wap',
 song_name: 'Trap Queen',
+genre: 'rap',
 mood:'romantic',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/a/a9/Fetty_Wap_%E2%80%93_Fetty_Wap.png',
 
@@ -2259,6 +3192,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/a/a9/Fetty_Wap_%E2%80%93_Fe
 
 song_artist: 'Drake',
 song_name: 'Hotline Bling',
+genre: 'rap',
 mood:'romantic',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/a/af/Drake_-_Views_cover.jpg',
 
@@ -2267,6 +3201,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/a/af/Drake_-_Views_cover.jp
 
 song_artist: 'Desiigner',
 song_name: 'Panda',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/e/e7/DesiignerPanda.jpg',
 
@@ -2275,6 +3210,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/e/e7/DesiignerPanda.jpg',
 
 song_artist: 'Rae Sremmurd',
 song_name: 'Black Beatles',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/9/9c/Rae_Sremmurd_-_SremmLife_2.jpg',
 
@@ -2283,6 +3219,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/9/9c/Rae_Sremmurd_-_SremmLi
 
 song_artist: 'Migos',
 song_name: 'Bad and Boujee',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/1/10/MigosCulture.jpg',
 
@@ -2291,6 +3228,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/1/10/MigosCulture.jpg',
 
 song_artist: 'Kendrick Lamar',
 song_name: 'Humble',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/5/51/Kendrick_Lamar_-_Damn.png',
 
@@ -2299,6 +3237,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/5/51/Kendrick_Lamar_-_Damn.
 
 song_artist: 'French Montana',
 song_name: 'Unforgettable',
+genre: 'rap',
 mood:'happy',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/a/ae/Jungle_Rules_by_French_Montana.jpg',
 
@@ -2307,6 +3246,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/a/ae/Jungle_Rules_by_French
 
 song_artist: 'Cardi B',
 song_name: 'Bodak Yellow',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/9/97/Cardi_B_-_Invasion_of_Privacy.png',
 
@@ -2315,6 +3255,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/9/97/Cardi_B_-_Invasion_of_
 
 song_artist: 'Childish Gambino',
 song_name: 'This is America',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/6/62/This_Is_America_%28single_cover%29_2018.jpg',
 
@@ -2323,6 +3264,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/6/62/This_Is_America_%28sin
 
 song_artist: 'XXXTentacion',
 song_name: 'Sad!',
+genre: 'rap',
 mood:'sad',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/2/21/%3F_XXXTENTACION_Cover.png',
 
@@ -2331,6 +3273,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/2/21/%3F_XXXTENTACION_Cover
 
 song_artist: 'Juice Wrld',
 song_name: 'Lucid Dreams',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/8/86/Goodbye_%26_Good_Riddance_Album_Cover.jpg',
 
@@ -2339,6 +3282,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/8/86/Goodbye_%26_Good_Ridda
 
 song_artist: 'Kodak Black',
 song_name: 'Zeze',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/6/67/Kodak_Black_%E2%80%93_Dying_to_Live.png',
 
@@ -2347,6 +3291,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/6/67/Kodak_Black_%E2%80%93_
 
 song_artist: 'Travis Scott',
 song_name: 'Sicko Mode',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/0/0b/Astroworld_by_Travis_Scott.jpg',
 
@@ -2355,6 +3300,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/0/0b/Astroworld_by_Travis_S
 
 song_artist: 'Salt N Pepa',
 song_name: 'Push It',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/4/4e/Salt-n-Pepa_-_Hot%2C_Cool_%26_Vicious_cover.png',
 
@@ -2363,6 +3309,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/4/4e/Salt-n-Pepa_-_Hot%2C_C
 
 song_artist: 'Sugarhill Gang',
 song_name: 'Rappers Delight',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/f/fa/Rappersdelight.jpeg',
 
@@ -2371,6 +3318,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/f/fa/Rappersdelight.jpeg',
 
 song_artist: 'Ludacris',
 song_name: 'Money Maker',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/0/04/Release_therapy3.JPG',
 
@@ -2379,6 +3327,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/0/04/Release_therapy3.JPG',
 
 song_artist: 'Kanye West',
 song_name: 'All Of The Lights',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/f/f0/My_Beautiful_Dark_Twisted_Fantasy.jpg',
 
@@ -2387,6 +3336,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/f/f0/My_Beautiful_Dark_Twis
 
 song_artist: '21 Savage',
 song_name: 'A Lot',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/3/36/21_Savage_%E2%80%93_I_Am_Greater_Than_I_Was.png',
 
@@ -2395,6 +3345,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/3/36/21_Savage_%E2%80%93_I_
 
 song_artist: 'Megan Thee Stallion',
 song_name: 'Body',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/b/bb/Megan_Thee_Stallion_-_Good_News.png',
 
@@ -2403,6 +3354,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/b/bb/Megan_Thee_Stallion_-_
 
 song_artist: 'Eminem',
 song_name: 'Lose Yourself',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/3/39/8milecover.jpg',
 
@@ -2411,6 +3363,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/3/39/8milecover.jpg',
 
 song_artist: 'Eve',
 song_name: 'Let Me Blow Ya Mind',
+genre: 'rap',
 mood:'happy',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/2/29/Scorpion_-_Eve_-_Cover.jpg',
 
@@ -2419,6 +3372,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/2/29/Scorpion_-_Eve_-_Cover
 
 song_artist: 'Ludacris',
 song_name: 'Area Codes',
+genre: 'rap',
 mood:'happy',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/a/a5/Ludacris-WordOfMouf-music-album.jpg',
 
@@ -2427,6 +3381,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/a/a5/Ludacris-WordOfMouf-mu
 
 song_artist: 'Anderson Paak',
 song_name: 'Lockdown',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Roskilde_Festival_Anderson_Paak-4_%28cropped%29.jpg/440px-Roskilde_Festival_Anderson_Paak-4_%28cropped%29.jpg',
 
@@ -2435,6 +3390,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Roskilde_Fe
 
 song_artist: 'Roddy Rich',
 song_name: 'The Box',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c5/Roddy_Ricch_-_Please_Excuse_Me_for_Being_Antisocial.png',
 
@@ -2443,6 +3399,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/c/c5/Roddy_Ricch_-_Please_E
 
 song_artist: 'Goldlink',
 song_name: 'Crew',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/b/b5/Goldlink-at-what-cost-album-.jpeg',
 
@@ -2451,6 +3408,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/b/b5/Goldlink-at-what-cost-
 
 song_artist: 'iLoveMakkonnen',
 song_name: 'Tuesday',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/f/ff/ILoveMakonnen_-_ILoveMakonnen.png',
 
@@ -2459,6 +3417,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/f/ff/ILoveMakonnen_-_ILoveM
 
 song_artist: 'Akon',
 song_name: 'I Wanna Love You',
+genre: 'rap',
 mood:'romantic',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/8/85/AKonvicted.jpg',
 
@@ -2467,6 +3426,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/8/85/AKonvicted.jpg',
 
 song_artist: 'Ja Rule',
 song_name: 'Always On Time',
+genre: 'rap',
 mood:'romantic',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/b/b1/Ja-rule-pain-is-love.jpg',
 
@@ -2475,6 +3435,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/b/b1/Ja-rule-pain-is-love.j
 
 song_artist: 'Fat Joe',
 song_name: 'Whats Luv',
+genre: 'rap',
 mood:'romantic',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/6/68/FatJoe.jpg',
 
@@ -2483,6 +3444,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/6/68/FatJoe.jpg',
 
 song_artist: 'Ol Dirty Bastard',
 song_name: 'Shimmy Shimmy Ya',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/b/bf/Odb_welfare.jpg',
 
@@ -2491,6 +3453,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/b/bf/Odb_welfare.jpg',
 
 song_artist: 'Wu-Tang Clan',
 song_name: 'Triumph',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/0/04/Wu-Tang_Forever.png',
 
@@ -2499,6 +3462,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/0/04/Wu-Tang_Forever.png',
 
 song_artist: 'Bone Thugs N Harmony',
 song_name: '1st of Tha Month',
+genre: 'rap',
 mood:'chill',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/0/08/E_1999_Eternal_cover.jpg',
 
@@ -2507,6 +3471,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/0/08/E_1999_Eternal_cover.j
 
 song_artist: 'Petey Pablo',
 song_name: 'Freek-a-Leek',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/6/65/Petey_Pablo_-_Still_Writing_in_My_Diary%2C_2nd_Entry.jpg',
 
@@ -2515,6 +3480,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/6/65/Petey_Pablo_-_Still_Wr
 
 song_artist: 'Youngbloodz',
 song_name: 'Damn',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/8/8b/Drankin%27_Patnaz.jpg',
 
@@ -2523,6 +3489,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/8/8b/Drankin%27_Patnaz.jpg'
 
 song_artist: 'The Game',
 song_name: 'Hate It or Love It',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/7/71/Hate_It_or_Love_It.jpg',
 
@@ -2531,6 +3498,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/7/71/Hate_It_or_Love_It.jpg
 
 song_artist: 'Dem Franchize Boyz',
 song_name: 'I Think They Like Me',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/5/56/Young%2C_Fly_%26_Flashy.jpg',
 
@@ -2539,6 +3507,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/5/56/Young%2C_Fly_%26_Flash
 
 song_artist: 'Nelly',
 song_name: 'Grillz',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/9/96/Nelly_-_Sweatsuit_-_CD_cover.jpg',
 
@@ -2547,6 +3516,7 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/9/96/Nelly_-_Sweatsuit_-_CD
 
 song_artist: 'Future',
 song_name: 'Move That Dope',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/2/21/Future_Honest_%28album%29.jpg',
 
@@ -2555,19 +3525,16 @@ cover_url:'https://upload.wikimedia.org/wikipedia/en/2/21/Future_Honest_%28album
 
 song_artist: 'Clipse',
 song_name: 'Grindin',
+genre: 'rap',
 mood:'hype',
 cover_url:'https://upload.wikimedia.org/wikipedia/en/2/2b/LordWillin%27.jpg',
 
-}
-
-]
-
-const disco = [
-
+},
 {
 
 song_artist: 'Bee Gees',
 song_name: 'Stayin Alive',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/0c/TheBeeGeesSaturdayNightFeveralbumcover.jpg',
 
@@ -2576,6 +3543,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/0c/TheBeeGeesSaturdayNig
 
 song_artist: 'Michael Jackson',
 song_name: "Don't Stop Til You Get Enough",
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f6/Off_the_wall.jpg',
 
@@ -2584,6 +3552,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f6/Off_the_wall.jpg',
 
 song_artist: 'KC And The Sunshine Band',
 song_name: 'Thats the Way (I Like it)',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c5/KC_and_the_Sunshine_Band_album_cover.jpg',
 
@@ -2592,6 +3561,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c5/KC_and_the_Sunshine_B
 
 song_artist: 'Rose Royce',
 song_name: 'Car Wash',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b6/RoseRoyceCarWash.jpg',
 
@@ -2600,6 +3570,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b6/RoseRoyceCarWash.jpg'
 
 song_artist: 'McFadden & Whitehead',
 song_name: "Ain't No Stoppin' Us Now",
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f5/McFD%2BWh.jpg',
 
@@ -2608,6 +3579,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f5/McFD%2BWh.jpg',
 
 song_artist: 'Cheryl Lynn',
 song_name: 'Got to be Real',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/20/Cheryl_Lynn.jpg',
 
@@ -2616,6 +3588,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/20/Cheryl_Lynn.jpg',
 
 song_artist: 'The Weather Girls',
 song_name: "It's Raining Men",
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/3f/Success_weather_girls.jpg',
 
@@ -2624,6 +3597,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/3/3f/Success_weather_girls
 
 song_artist: 'Village People',
 song_name: 'Y.M.C.A.',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4c/Cruisin1978.jpg',
 
@@ -2632,6 +3606,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4c/Cruisin1978.jpg',
 
 song_artist:'Michael Jackson',
 song_name: 'Rock With You',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f6/Off_the_wall.jpg',
 
@@ -2640,6 +3615,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f6/Off_the_wall.jpg',
 
 song_artist: 'Anita Ward',
 song_name: 'Ring My Bell',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/9a/Anita_Ward_-_Songs_Of_Love_.jpg',
 
@@ -2648,6 +3624,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/9a/Anita_Ward_-_Songs_Of
 
 song_artist: 'Barry White',
 song_name: "Can't Get Enough of Your Love, Babe",
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4e/Barry_White_Cant_Get_Enough.jpg',
 
@@ -2656,6 +3633,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4e/Barry_White_Cant_Get_
 
 song_artist: 'The Pointer Sisters',
 song_name: "I'm So Excited",
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/6a/I%27m_So_Excited_by_Pointer_Sisters_1982_12-inch_US_vinyl.png',
 
@@ -2664,6 +3642,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/6a/I%27m_So_Excited_by_P
 
 song_artist: 'Earth, Wind & Fire',
 song_name: 'September',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/95/BestofEarthWind%26Fire.jpg',
 
@@ -2672,6 +3651,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/95/BestofEarthWind%26Fir
 
 song_artist: 'Sister Sledge',
 song_name: 'We Are Family',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/49/SIster_Sledge_We_Are_Family_1979.jpg',
 
@@ -2680,6 +3660,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/49/SIster_Sledge_We_Are_
 
 song_artist: 'Diana Ross',
 song_name: "I'm Coming Out",
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/0c/Diana_ross.jpg',
 
@@ -2688,6 +3669,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/0/0c/Diana_ross.jpg',
 
 song_artist: 'George Clinton',
 song_name: 'Atomic Dog',
+genre: 'disco',
 mood: 'hype',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/2a/George_Clinton-Computer_Games_%28album_cover%29.jpg',
 
@@ -2696,6 +3678,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/2a/George_Clinton-Comput
 
 song_artist: 'Kool & The Gang',
 song_name: 'Get Down on It',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/22/Something_Special1981.jpg',
 
@@ -2704,6 +3687,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/22/Something_Special1981
 
 song_artist: 'The Trammps',
 song_name: 'Disco Inferno',
+genre: 'disco',
 mood: 'hype',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/fb/Disco_Inferno_album_small.jpg',
 
@@ -2712,6 +3696,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/fb/Disco_Inferno_album_s
 
 song_artist: 'Carl Douglas',
 song_name: 'Kung Fu Fighting',
+genre: 'disco',
 mood: 'hype',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/d2/KungFuFightingCarlDouglas.jpg',
 
@@ -2720,6 +3705,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/d2/KungFuFightingCarlDou
 
 song_artist: 'Little Eva',
 song_name: 'The Loco-Motion',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/d2/The_Loco-Motion_by_Little_Eva_1962_US_vinyl_A-side.jpg',
 
@@ -2728,6 +3714,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/d/d2/The_Loco-Motion_by_Li
 
 song_artist: 'Candi Staton',
 song_name: 'Young Hearts Run Free',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f6/Young-Hearts-Run-Free2.jpg',
 
@@ -2736,6 +3723,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/f/f6/Young-Hearts-Run-Free
 
 song_artist: 'Gloria Gaynor',
 song_name: 'I Will Survive',
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/7d/Love_Tracks_%28Gloria_Gaynor_album%29_%28fair_use%29.jpg',
 
@@ -2744,6 +3732,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/7/7d/Love_Tracks_%28Gloria
 
 song_artist: 'Chaka Khan',
 song_name: "I'm Every Woman",
+genre: 'disco',
 mood: 'happy',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/1c/Chaka_Khan_-_Chaka_%281978_album%29.jpg',
 
@@ -2752,6 +3741,7 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/1c/Chaka_Khan_-_Chaka_%2
 
 song_artist: 'Rose Royce',
 song_name: "Love Don't Live Here Anymore",
+genre: 'disco',
 mood: 'sad',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/66/Strikes_Again_1978.jpg',
 
@@ -2759,10 +3749,15 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/66/Strikes_Again_1978.jp
 {
 
 song_artist: 'Chic',
-song_name:, 'Le Freak'
+song_name: 'Le Freak',
+genre: 'disco',
 mood: 'hype',
 cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/6f/C%27est_Chic_cover.jpg',
 
 }
-
 ]
+
+
+songs.each do |attributes|
+  Song.create attributes
+end
