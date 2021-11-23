@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 import AboutUs from "./pages/AboutUs";
 import CreateProfile from "./pages/CreateProfile";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import {fetchSongs} from './api'
 
 class App extends React.Component {
   constructor(props){
@@ -16,7 +17,11 @@ class App extends React.Component {
       songs: []
     }
   }
-
+  componentDidMount(){
+    fetchSongs().then(songs=>{
+      this.setState({songs})
+    })
+  }
 //Songs are coming from rails NOT FROM FETCH
 
   render() {
@@ -25,7 +30,7 @@ class App extends React.Component {
         <Header {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/songindex" component={()=><Songs songs={this.props.songs}/>} />
+          <Route path="/songindex" component={()=><Songs songs={this.state.songs}/>} />
         </Switch>
         <Footer />
       </BrowserRouter>
