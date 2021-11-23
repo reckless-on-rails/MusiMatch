@@ -19,6 +19,9 @@ class Header extends Component {
         <NavLink to="/songindex">
           songindex
           </NavLink>
+          <NavLink to="/users"> 
+          Users
+          </NavLink>
 
         {!logged_in && (
           <>
