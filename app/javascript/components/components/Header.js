@@ -16,9 +16,8 @@ class Header extends Component {
         <NavLink to="/">
           <img src={tape} alt="logo for musimatch" className="logo"></img>
         </NavLink>
-        <NavLink to="/songindex">
-          songindex
-          </NavLink>
+        <NavLink to="/songindex">songindex</NavLink>
+        <NavLink to="/users">Users</NavLink>
 
         {!logged_in && (
           <>

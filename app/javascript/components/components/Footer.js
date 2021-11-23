@@ -1,9 +1,14 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class Footer extends Component {
   render() {
     return (
-      <h1>THIS is the FOOTER Copyright Ato, Brandon, Cianna, and Ross 2021</h1>
+      <>
+        <NavLink to="/aboutus">About Us</NavLink>
+        <br />
+        <p>©Reckless on Rails</p>
+      </>
     );
   }
 }
