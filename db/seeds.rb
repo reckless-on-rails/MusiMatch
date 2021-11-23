@@ -8,7 +8,7 @@
 songs = [
   {
         song_artist: 'Pink Floyd',
-        song_name: 'Anothother Brick wall (part 2)',
+        song_name: 'Another Brick in the Wall (part 2)',
         genre: 'pop',
         mood: '',
         cover_url: 'https://townsquare.media/site/295/files/2020/03/Floyd.jpg?w=980&q=75',
@@ -70,7 +70,7 @@ songs = [
         cover_url: 'https://static.stereogum.com/uploads/2021/05/Phil-Collins-A-Groovy-Kind-Of-Love-1622230105.jpeg',  
     },
     {
-        song_artist: "Guns n' Roses",
+        song_artist: "Guns N' Roses",
         song_name: "Sweet Child O' Mine",
         genre: 'pop',
         mood: '',
@@ -819,7 +819,7 @@ songs = [
         cover_url: 'https://e.snmc.io/i/1200/s/075a3f4253e8ffe7b83b0b8e6a69413f/3073638',  
     },
     {
-        song_artist: 'dolly parton',
+        song_artist: 'Dolly Parton',
         song_name: 'Jolene',
         genre: 'country',
         mood: '',
@@ -1898,10 +1898,10 @@ songs = [
   },
   {
     song_artist: 'Prince',
-    song_name: 'Kiss',
+    song_name: 'Purple Rain',
     genre: 'rock',
-    mood: 'romantic',
-    cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c6/ParadeLP.jpg'
+    mood: 'sad',
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/9c/Princepurplerain.jpg'
   },
   {
     song_artist: 'AC/DC',
@@ -1940,7 +1940,7 @@ songs = [
   },
   {
     song_artist: "Guns N' Roses",
-    song_name: "Sweet Child O' Mine",
+    song_name: "Paradise City",
     genre: 'rock',
     mood: 'happy',
     cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/60/GunsnRosesAppetiteforDestructionalbumcover.jpg'
@@ -2241,9 +2241,9 @@ songs = [
   },
   {
     song_artist: 'Nirvana',
-    song_name: 'Smells like Teen Spirit',
+    song_name: 'Come As You Are',
     genre: 'rock',
-    mood: 'hype',
+    mood: 'sad',
     cover_url: 'https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg'
   },
   {
@@ -2346,10 +2346,10 @@ songs = [
   },
   {
     song_artist: 'The White Stripes',
-    song_name: 'Seven Nation Army',
+    song_name: 'Icky Thump',
     genre: 'rock',
     mood: 'hype',
-    cover_url: 'https://upload.wikimedia.org/wikipedia/en/1/11/Elephant%2C_The_White_Stripes.png'
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/2/25/The_White_Stripes_Icky_Thumb.jpg'
   },
   {
     song_artist: 'Niel Diamond',
@@ -2486,10 +2486,10 @@ songs = [
   },
   {
     song_artist: 'Green Day',
-    song_name: 'Boulevard of Broken Dreams',
+    song_name: 'When I Come Around',
     genre: 'alternative',
     mood: 'happy',
-    cover_url: 'https://upload.wikimedia.org/wikipedia/en/e/ed/Green_Day_-_American_Idiot_album_cover.png'
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/4/4b/Green_Day_-_Dookie_cover.jpg'
   },
   {
     song_artist: 'Green Day',
@@ -2535,10 +2535,10 @@ songs = [
   },
   {
     song_artist: 'Kings of Leon',
-    song_name: 'Sex On Fire',
+    song_name: 'Waste a Moment',
     genre: 'alternative',
     mood: 'romantic',
-    cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c1/KingsOfLeon-OnlyByTheNightCover.png'
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/c/c9/KoLWALLS.jpg'
   },
   {
     song_artist: 'The Strokes',
@@ -2556,7 +2556,7 @@ songs = [
   },
   {
     song_artist: 'Cage the Elephant',
-    song_name: 'No Rest For the Wick',
+    song_name: "Ain't No Rest for the Wicked",
     genre: 'alternative',
     mood: 'hype',
     cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/95/Cage_the_elephant_album.jpg'
@@ -3758,6 +3758,6 @@ cover_url: 'https://upload.wikimedia.org/wikipedia/en/6/6f/C%27est_Chic_cover.jp
 ]
 
 
-songs.each do |attributes|
-  Song.create attributes
+songs.each do |attribute|
+  Song.create attribute
 end
