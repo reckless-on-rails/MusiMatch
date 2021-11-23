@@ -46,6 +46,8 @@ Authenticated users can now sign up and be redirected to create a profile from s
 Unprotected Index:
 
 ## No external API used so fetch call is not needed. Songs are coming from the database that we seeded in Rails.
+
+Database is passed through using props. Props were defined in the constructor and dot notation is used to access specific values in the object.
   
 
 
