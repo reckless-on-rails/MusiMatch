@@ -8,13 +8,28 @@ import Profile from "./pages/Profile";
 import AboutUs from "./pages/AboutUs";
 import CreateProfile from "./pages/CreateProfile";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import {fetchProfile} from './api'
 
 class AuthApp extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      profile: {}
+    }
+  }
+  // componentDidMount(){
+  //   fetchProfile(this.props.current_user.id).then(profile=>{
+  //     console.log(profile)
+  //     this.setState({profile})
+  //   })
+  // }
+
+
   render() {
     return (
       <BrowserRouter>
         <Header {...this.props} />
-        {this.props.logged_in && this.props.profile.length === 0 ? (
+        {this.props.logged_in ? (
           <CreateProfile {...this.props} />
         ) : (
           <Switch>
