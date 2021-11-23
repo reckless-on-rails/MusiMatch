@@ -3,7 +3,6 @@ import { thead, tr, th, tbody, Table, hover } from "reactstrap";
 class Songs extends Component {
   render() {
     const { songs } = this.props;
-    console.log(songs);
     return (
       <>
         <h1>This is songs</h1>
@@ -17,9 +16,9 @@ class Songs extends Component {
             </tr>
           </thead>
           {songs &&
-            songs.map((song) => {
+            songs.map((song, i) => {
               return (
-                <tbody>
+                <tbody key={i}>
                   <tr>
                     {/* <th scope="row"></th> */}
                     <td>{song.song_artist}</td>
