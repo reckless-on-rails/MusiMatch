@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import tape from "../assets/tape8.gif";
+
 
 class Header extends Component {
   render() {
@@ -14,7 +14,7 @@ class Header extends Component {
     return (
       <header>
         <NavLink to="/">
-          <img src={tape} alt="logo for musimatch" className="logo"></img>
+          <img src="./assets/tape8.gif" alt="logo for musimatch" className="logo"></img>
         </NavLink>
         <NavLink to="/songindex">
           songindex

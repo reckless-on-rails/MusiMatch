@@ -4,13 +4,14 @@ import Adapter from 'enzyme-adapter-react-16'
 import Header from './Header'
 
 
+
 Enzyme.configure({adapter: new Adapter()})
 
 describe("When Header renders", () => {
-    it("displays Header", () => {
+    it("displays a nav bar", () => {
         const header = shallow(<Header />)
-        const navLinkWrapper = header.find("NavLink")
-        expect(navLinkWrapper.length).toEqual(2)
+        const headerNav = header.find("ul")
+        expect(headerNav.length).toEqual(1);
       })
   
 })
