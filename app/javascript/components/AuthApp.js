@@ -14,16 +14,13 @@ class AuthApp extends React.Component {
     return (
       <BrowserRouter>
         <Header {...this.props} />
-        {this.props.logged_in && this.props.profile.length === 0 ? (
-          <CreateProfile {...this.props} />
-        ) : (
-          <Switch>
-            <Route exact path="/" component={Profile} />
+        <Switch>
+            <Route exact path="/" component={()=> <Profile currentUser={this.props.current_user}/>} />
             <Route path="/songindex" component={Songs} />
             <Route path="/users" component={Users} />
             <Route path="/aboutus" component={AboutUs} />
+            <Route path="/createProfile" component={CreateProfile}/>
           </Switch>
-        )}
         <Footer />
       </BrowserRouter>
     );

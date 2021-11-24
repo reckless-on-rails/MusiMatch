@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     authenticated :user do
       root 'profiles#index', as: :authenticated_root
+      get '/profiles/:id', to: 'profiles#show'
     end
 
     unauthenticated do
@@ -15,4 +16,5 @@ Rails.application.routes.draw do
 
   get '*path', to: 'home#index', constraints: ->(request){ request.format.html? }
   root 'home#index'
+
 end

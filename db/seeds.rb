@@ -5,6 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(email:"fake@fake.com", password:"123456")
+
+profiles = [
+  {
+    display_name: 'FakeUser',
+    contact_info: 'ross@fake.com',
+    bio: 'I like to take long walks on the beach'
+  }
+]
+
+first_user = User.first
+profiles.each do |attribute|
+ first_user.profiles.create attribute
+end
+
 songs = [
   {
         song_artist: 'Pink Floyd',
@@ -1880,7 +1896,7 @@ songs = [
     song_name: "I Don't Want to Miss a Thing",
     genre: 'rock',
     mood: 'romantic',
-    cover_url: ''
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/9/9e/Armageddon%2C_The_Album.jpeg'
   },
   {
     song_artist: 'Walk This Way',
@@ -2006,14 +2022,14 @@ songs = [
     song_name: 'Panama',
     genre: 'rock',
     mood: 'hype',
-    cover_url: 'https://en.wikipedia.org/wiki/File:Van_Halen_-_1984.jpg'
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/5f/Van_Halen_-_1984.jpg'
   },
   {
     song_artist: 'Van Halen',
     song_name: 'Jump',
     genre: 'rock',
     mood: 'happy',
-    cover_url: 'https://en.wikipedia.org/wiki/File:Van_Halen_-_1984.jpg'
+    cover_url: 'https://upload.wikimedia.org/wikipedia/en/5/5f/Van_Halen_-_1984.jpg'
   },
   {
     song_artist: 'Van Halen',
