@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Libre+Barcode+128+Text&family=Monofett&family=Rock+Salt&family=Special+Elite&display=swap');
+
 /*---PAGE---*/
 .page-container {
     position: relative;
@@ -8,7 +10,6 @@
     padding-bottom: 2.5rem;    /* Footer height */
   }
   
-
 /*---HEADER---*/
 header {
     background-color: black;
@@ -26,6 +27,29 @@ header {
     float: left;
     align-items: center;
     position: fixed;
+
+}
+
+
+/*---THEME---*/
+th {
+  background-color: #dd2e2e;
+  font-size: xx-large;
+  // font-family: 'Cinzel', serif;
+  // font-family: 'Rock Salt', cursive;
+  font-family: 'Special Elite', cursive;
+  
+}
+
+.barcode {
+
+  // font-family: 'Monofett', cursive;
+  font-family: 'Libre Barcode 128 Text', cursive;
+  text-align: center;
+  font-size: 90px;
+  background-color: #dd2e2e;
+
+
 }
 
 
@@ -38,5 +62,10 @@ header {
   }
 
   tbody:hover {
-    background-color: yellow;
+    background-color: #9b0d37;
+
+  }
+
+  tbody {
+    text-align: center;
   }
