@@ -18,6 +18,7 @@ class Header extends Component {
         </NavLink>
         <NavLink to="/songindex">songindex</NavLink>
         <NavLink to="/users">Users</NavLink>
+        <NavLink to="/createProfile">Create your Profile</NavLink>
 
         {!logged_in && (
           <>
