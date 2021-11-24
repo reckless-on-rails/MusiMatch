@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Are+You+Serious&family=Audiowide&family=Cinzel+Decorative&family=Cinzel:wght@500&family=Comforter+Brush&family=Cormorant+Infant:ital,wght@1,300&family=Cutive+Mono&family=Explora&family=Great+Vibes&family=IM+Fell+English:ital@1&family=Libre+Barcode+39+Text&family=Monofett&family=New+Rocker&family=Niconne&family=Orbitron&family=Passions+Conflict&family=Philosopher&family=Playball&family=Rock+Salt&family=Sacramento&family=Special+Elite&family=Stardos+Stencil&family=Yuji+Syuku&display=swap');
+
+
 /*---PAGE---*/
 .page-container {
     position: relative;
@@ -8,7 +11,6 @@
     padding-bottom: 2.5rem;    /* Footer height */
   }
   
-
 /*---HEADER---*/
 header {
     background-color: black;
@@ -26,6 +28,35 @@ header {
     float: left;
     align-items: center;
     position: fixed;
+
+}
+
+
+/*---THEME---*/
+th {
+  background-color: #dd2e2e;
+  font-size: xx-large;
+  //*font-family: 'Audiowide', cursive;
+  // *font-family: 'Cinzel', serif;
+  // *font-family: 'Cinzel Decorative', cursive;
+  // *font-family: 'Cutive Mono', monospace;
+  // *font-family: 'IM Fell English', serif;
+  // *font-family: 'New Rocker', cursive;
+  // *font-family: 'Orbitron', sans-serif;
+    // font-family: 'Rock Salt', cursive;
+  // *font-family: 'Sacramento', cursive;
+  font-family: 'Special Elite', cursive;
+  
+}
+
+li {
+
+  font-family: 'Monofett', cursive;
+  text-align: center;
+  font-size: xx-large;
+  background-color: #dd2e2e;
+
+
 }
 
 
@@ -38,5 +69,10 @@ header {
   }
 
   tbody:hover {
-    background-color: yellow;
+    background-color: #9b0d37;
+
+  }
+
+  tbody {
+    text-align: center;
   }
