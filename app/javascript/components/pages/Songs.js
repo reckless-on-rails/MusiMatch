@@ -22,8 +22,7 @@ class Songs extends Component {
             </thead>
             <br></br>
 
-            {songs &&
-              songs.map((song, i) => {
+            {songs?.map((song, i) => {
                 return (
                   <tbody key={i}>
                     <tr>
