@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { thead, tr, th, tbody, Table, hover } from "reactstrap";
+import { thead, tr, th, tbody, Table} from "reactstrap";
 
 class Songs extends Component {
   render() {
@@ -7,20 +7,22 @@ class Songs extends Component {
     return (
       <>
       <th>
-        <li>
+        < div className ="barcode">
         <h1>Library</h1>
-        </li>
+        </div>
 
         
         <Table hover>
           <thead>
             <tr>
-              <th>Cover</th>
-              <th>Artist</th>
-              <th>Song</th>
-              <th>Genre</th>
+              <th>COVER</th>
+              <th>ARTIST</th>
+              <th>SONG</th>
+              <th>GENRE</th>
+              
             </tr>
           </thead>
+          <br></br>
           
           {songs &&
             songs.map((song, i) => {
