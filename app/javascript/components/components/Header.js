@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import tape from '../assets/tape8.gif'
 
 class Header extends Component {
   render() {
@@ -13,11 +14,11 @@ class Header extends Component {
     return (
       <header>
         <NavLink to="/">
-          <img src="../assets/tape8.gif" alt="logo for musimatch" className="logo"></img>
+          <img src={tape} alt="logo" className="logo"></img>
         </NavLink>
-        <NavLink to="/songindex">songindex</NavLink>
+        <NavLink to="/songindex">Library</NavLink>
         <NavLink to="/users">Users</NavLink>
-        <NavLink to="/createProfile">Create your Profile</NavLink>
+        <NavLink to="/createProfile">Create Profile</NavLink>
 
         {!logged_in && (
           <>

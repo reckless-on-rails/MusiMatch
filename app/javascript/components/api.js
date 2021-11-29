@@ -16,3 +16,23 @@ export async function fetchProfile (id) {
     return {}
   }
 }
+
+export async function createProfile (profileData) {
+  try {
+    const options = {
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(profileData)
+    }
+    const response = await fetch(`profiles`, options)
+      // return response.json()
+      console.log(response)
+  } catch (e){
+    console.error(e)
+    return {}
+  }
+}
+
+

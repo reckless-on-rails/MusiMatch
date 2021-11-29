@@ -1,21 +1,22 @@
 import React, { useState } from "react";
+import {createProfile} from '../api';
 
-const CreateProfile = () => {
-  const [state, setState] = useState({ displayName: "", contact: "", bio: "" });
+const CreateProfile = (props) => {
+  const [state, setState] = useState({ display_name: "", contact: "", bio: "" });
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
   const handleSubmit = () => {
     // make a POST to rails to create a new profile
-    console.log("submitting new profile", state);
+    createProfile({...state,user_id:props.currentUser.id})
   };
   return (
     <div>
       Create Profile
       <input
         type="text"
-        name="displayName"
-        placeholder="displayName"
+        name="display_name"
+        placeholder="display name"
         onChange={handleChange}
       />
       <input
