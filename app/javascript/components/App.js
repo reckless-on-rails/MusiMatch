@@ -22,7 +22,6 @@ class App extends React.Component {
       this.setState({songs})
     })
   }
-//Songs are coming from rails NOT FROM FETCH
 
   render() {
     return (
