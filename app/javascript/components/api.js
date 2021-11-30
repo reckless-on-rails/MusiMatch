@@ -9,7 +9,19 @@ export async function fetchSongs () {
 
 export async function fetchProfile (id) {
   try {
+    // const response = await fetch(`/profiles/${id}`)
     const response = await fetch(`/profiles/${id}`)
+      return response.json()
+  } catch (e){
+    console.error(e)
+    return {}
+  }
+}
+
+export async function fetchProfiles () {
+  try {
+    // const response = await fetch(`/profiles/${id}`)
+    const response = await fetch(`/allprofiles`)
       return response.json()
   } catch (e){
     console.error(e)

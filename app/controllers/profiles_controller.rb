@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
-  def index
-    @profile = current_user.profiles
+  def all
+    profiles = Profile.all
+    render json: profiles
   end
 
   def show

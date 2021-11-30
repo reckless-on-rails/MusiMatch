@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :profiles
+  # resources :profiles
   resources :songs
     devise_for :users
 
@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     authenticated :user do
       root 'profiles#index', as: :authenticated_root
       get '/profiles/:id', to: 'profiles#show'
+      get '/allprofiles', to: 'profiles#all'
     end
 
     unauthenticated do
