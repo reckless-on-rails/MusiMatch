@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { fetchProfile, fetchLikesById, fetchSongById } from "../api";
+import { fetchProfile, fetchLikesByProfileId, fetchSongById } from "../api";
 import {
   Card,
   CardBody,
@@ -19,7 +19,7 @@ class Profile extends Component {
   async componentDidMount() {
     const { currentUser } = this.props;
     const profile = await fetchProfile(currentUser.id);
-    const likes = await fetchLikesById(currentUser.id);
+    const likes = await fetchLikesByProfileId(profile.id);
     this.setState({ profile, likes });
   }
 

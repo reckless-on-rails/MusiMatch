@@ -33,7 +33,7 @@ class Users extends Component {
                   {profile.bio}
                 </CardSubtitle>
                 <CardText>{profile.contact_info}</CardText>
-                <Button>View</Button>
+                <a href={`/users/${profile.id}`}><Button>View</Button></a>
               </CardBody>
             </Card>
           );

@@ -28,9 +28,9 @@ export async function fetchProfile(id) {
 }
 
 
-export async function fetchLikesById(id) {
+export async function fetchLikesByProfileId(profileId) {
   try {
-    const response = await fetch(`/likesbyid/${id}`);
+    const response = await fetch(`/likesbyid/${profileId}`);
     return response.json();
   } catch (e) {
     console.error(e);
@@ -65,14 +65,14 @@ export async function createProfile(profileData) {
   }
 }
 
-export async function likeSong(userId, songId) {
+export async function likeSong(profileId, songId) {
   try {
     const options = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ user_id: userId, song_id: songId }),
+      body: JSON.stringify({ profile_id: profileId, song_id: songId }),
     };
     const response = await fetch("likes", options);
     return response.json();

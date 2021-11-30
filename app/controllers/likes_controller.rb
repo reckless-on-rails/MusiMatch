@@ -10,13 +10,22 @@ class LikesController < ApplicationController
   end
 
   def likes_by_id
-    likes = Like.where(user_id: params[:id])
+    likes = Like.where(profile_id: params[:id])
     render json: likes
   end
 
   def create
-    like = Like.create(like_params)
-    render json: like
+    found_like = Like.find_by(like_params)
+    # puts "AHHHHH"
+    # puts found_like
+    if found_like.present?
+
+      found_like.destroy
+      render json: []
+    else
+      like = Like.create(like_params)
+      render json: like
+    end
   end
 
   def destroy
@@ -28,7 +37,7 @@ class LikesController < ApplicationController
   private
 
   def like_params
-    params.require(:like).permit(:user_id, :song_id)
+    params.require(:like).permit(:profile_id, :song_id)
     # ask mentor about user id
   end
 end
