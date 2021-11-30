@@ -1,6 +1,13 @@
 {
   "name": "musimatch-app",
   "private": true,
+  "scripts": {
+    "webpacker": "./bin/webpack-dev-server",
+    "server": "rails s",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "db:reset": "rails db:drop && rails db:create && rails db:migrate && rails db:seed"
+  },
   "dependencies": {
     "@babel/preset-react": "^7.16.0",
     "@rails/actioncable": "^6.0.0",

@@ -1,5 +1,36 @@
 # README
-SET UP:
+
+## Requirements
+node v14
+rails v??
+
+## Development
+```bash
+#Install ruby dependencies
+bundle
+
+# Install javascript dependencies
+yarn install
+
+# Set up db
+rails db:create
+rails db:migrate
+rails db:seed
+
+# Start rails server
+yarn server
+
+# In another terminal start webpacker
+yarn webpacker
+
+# To run tests
+yarn test
+
+# To run tests in watch mode
+yarn test:watch 
+```
+
+NOTES:
 ``````
 $ rails new capstone_app -d postgresql -T
 $ cd capstone_app

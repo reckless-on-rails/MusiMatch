@@ -7,14 +7,9 @@ import Footer from "../components/Footer";
 class Home extends Component {
   render() {
     return (
-      <>
-       <NavLink to="/songindex">
-        <img src={logo} width='100%' height='100%'></img>
-       </NavLink>
-      
-      
-      </>
-      
+      <div className="container">
+        <h1>This is the Home page</h1>
+      </div>
     );
   }
 }

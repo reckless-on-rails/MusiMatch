@@ -1,15 +1,15 @@
 class ProfilesController < ApplicationController
   def index
-    @profile = current_user.profiles
+    profiles = Profile.all
+    render json: profiles, include: [:likes]
   end
 
   def show
     profile = Profile.find(params[:id])
-    render json: profile
+    render json: profile, include: [:user]
   end
 
   def create
-    puts profile_params
     profile = Profile.create(profile_params)
     if profile.valid?
       render json: profile
@@ -17,7 +17,8 @@ class ProfilesController < ApplicationController
       render json: profile.errors, status: 422
     end
   end
-  def update 
+
+  def update
     profile = Profile.find(params[:id])
     profile.update(profile_params)
     if profile.valid?
@@ -26,15 +27,16 @@ class ProfilesController < ApplicationController
       render json: profile.errors, status: 422
     end
   end
-  def destroy 
+
+  def destroy
     profile = Profile.find(params[:id])
     profile.destroy
     render json: profile
   end
+
   private
+
   def profile_params
     params.require(:profile).permit(:user_id, :display_name, :contact, :bio)
-    # ask mentor about user id
   end
-
 end
