@@ -13,25 +13,28 @@ import {
 // stretch goal - profile card shows amount of liked songs
 
 class Profile extends Component {
+  state = {
+    profile: {},
+  };
+  componentDidMount() {
+    fetchProfile(this.props.currentUser.id).then((profile) => {
+      this.setState({ profile });
+    });
+  }
   render() {
-    const { profiles } = this.props;
+    const { currentUser } = this.props;
+    const { profile } = this.state;
+    const { display_name: displayName } = profile;
     return (
       <>
-        <h1>hi</h1>
-        {profiles?.map((profile, i) => {
-          return (
-            <Card key={profile.id}>
-              <CardBody>
-                <CardTitle tag="h5">{profile.display_name}</CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  {profile.bio}
-                </CardSubtitle>
-                <CardText>.</CardText>
-                <Button>View</Button>
-              </CardBody>
-            </Card>
-          );
-        })}
+        <h1>Welcome: {currentUser.email}</h1>
+        {Object.keys(profile).length > 0 && (
+          <Card>
+            <CardBody>
+              <CardTitle>{displayName}</CardTitle>
+            </CardBody>
+          </Card>
+        )}
       </>
     );
   }

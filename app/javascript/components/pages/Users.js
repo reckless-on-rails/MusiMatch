@@ -11,8 +11,16 @@ import {
   Col,
 } from "reactstrap";
 // stretch goal - profile card shows amount of liked songs
+import { fetchProfiles } from "../api";
 
 class Users extends Component {
+  state = {
+    profiles: [],
+  };
+  async componentDidMount() {
+    const profiles = await fetchProfiles();
+    this.setState({ profiles });
+  }
   render() {
     const { profiles } = this.props;
     return (

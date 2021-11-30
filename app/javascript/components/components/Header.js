@@ -39,14 +39,15 @@ class Header extends Component {
         </NavLink>
         <div style={styles.navLinks}>
           {/* Routes shared for unauth and auth go here */}
+          <NavLink to='/' style={styles.link}>Home</NavLink>
           {!loggedIn ? (
             <>
-              <NavLink style={styles.link} to={newUserRoute}>
+              <a style={styles.link} href={newUserRoute}>
                 Sign Up
-              </NavLink>
-              <NavLink style={styles.link} to={signInRoute}>
+              </a>
+              <a style={styles.link} href={signInRoute}>
                 Sign In
-              </NavLink>
+              </a>
             </>
           ) : (
             <>

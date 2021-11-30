@@ -10,7 +10,6 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    puts profile_params
     profile = Profile.create(profile_params)
     if profile.valid?
       render json: profile
@@ -39,6 +38,5 @@ class ProfilesController < ApplicationController
 
   def profile_params
     params.require(:profile).permit(:user_id, :display_name, :contact, :bio)
-    # ask mentor about user id
   end
 end

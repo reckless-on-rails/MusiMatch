@@ -39,7 +39,7 @@ const AuthRouter = ({ songs, profiles, current_user: currentUser }) => (
       path="/"
       component={() => <Profile currentUser={currentUser} />}
     />
-    <Route path="/songindex" component={() => <Songs songs={songs} />} />
+    <Route path="/songindex" component={() => <Songs currentUser={currentUser}/>} />
     <Route path="/users" component={() => <Users profiles={profiles} />} />
     <Route path="/aboutus" component={AboutUs} />
     <Route
