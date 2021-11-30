@@ -8,33 +8,45 @@ import Profile from "./pages/Profile";
 import AboutUs from "./pages/AboutUs";
 import CreateProfile from "./pages/CreateProfile";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import {fetchSongs} from './api'
 
 class App extends React.Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      songs: []
-    }
-  }
-  componentDidMount(){
-    fetchSongs().then(songs=>{
-      this.setState({songs})
-    })
-  }
-
   render() {
     return (
       <BrowserRouter>
         <Header {...this.props} />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/songindex" component={()=><Songs songs={this.state.songs}/>} />
-        </Switch>
+        {!this.props.current_user ? (
+          <UnauthRouter songs={this.props.songs} />
+        ) : (
+          <AuthRouter {...this.props} />
+        )}
         <Footer />
       </BrowserRouter>
     );
   }
 }
+
+const UnauthRouter = ({ songs }) => (
+  <Switch>
+    <Route exact path="/" component={Home} />
+    <Route path="/songindex" component={() => <Songs songs={songs} />} />
+  </Switch>
+);
+
+const AuthRouter = ({ songs, profiles, current_user: currentUser }) => (
+  <Switch>
+    <Route
+      exact
+      path="/"
+      component={() => <Profile currentUser={currentUser} />}
+    />
+    <Route path="/songindex" component={() => <Songs songs={songs} />} />
+    <Route path="/users" component={() => <Users profiles={profiles} />} />
+    <Route path="/aboutus" component={AboutUs} />
+    <Route
+      path="/createProfile"
+      component={() => <CreateProfile currentUser={currentUser} />}
+    />
+  </Switch>
+);
 
 export default App;

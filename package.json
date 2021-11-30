@@ -1,6 +1,12 @@
 {
   "name": "musimatch-app",
   "private": true,
+  "scripts": {
+    "webpacker": "./bin/webpack-dev-server",
+    "server": "rails s",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
   "dependencies": {
     "@babel/preset-react": "^7.16.0",
     "@rails/actioncable": "^6.0.0",
@@ -21,6 +27,9 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "react-test-renderer": "^17.0.2",
     "webpack-dev-server": "^3"
   },
   "jest": {

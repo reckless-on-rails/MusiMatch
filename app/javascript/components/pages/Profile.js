@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {fetchProfile} from '../api';
+import { fetchProfile } from "../api";
 import {
   Card,
   CardBody,
@@ -13,37 +13,25 @@ import {
 // stretch goal - profile card shows amount of liked songs
 
 class Profile extends Component {
-
-  componentDidMount(){
-    fetchProfile(this.props.currentUser.id)
-      .then(profile => {
-        console.log({profile})
-      })
-  }
-
   render() {
-    const { profiles } = this.props
+    const { profiles } = this.props;
     return (
       <>
-      <h1>hi</h1>
+        <h1>hi</h1>
         {profiles?.map((profile, i) => {
-                return (
-                  <Card key={profile.id}>
-                    <CardBody>
-                      <CardTitle tag="h5">
-                        {profile.display_name}
-                      </CardTitle>
-                      <CardSubtitle className="mb-2 text-muted" tag="h6">
-                      {profile.bio}
-                      </CardSubtitle>
-                      <CardText>
-                        .
-                      </CardText>
-                      <Button>View</Button>
-                    </CardBody>
-                  </Card>
-                );
-              })}
+          return (
+            <Card key={profile.id}>
+              <CardBody>
+                <CardTitle tag="h5">{profile.display_name}</CardTitle>
+                <CardSubtitle className="mb-2 text-muted" tag="h6">
+                  {profile.bio}
+                </CardSubtitle>
+                <CardText>.</CardText>
+                <Button>View</Button>
+              </CardBody>
+            </Card>
+          );
+        })}
       </>
     );
   }

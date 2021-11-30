@@ -1,31 +1,55 @@
 import React, { useState } from "react";
-import {createProfile} from '../api';
+import { createProfile } from "../api";
+
+const styles = {
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    margin: "1rem",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  input: {
+    padding: "0.3rem"
+  },
+};
 
 const CreateProfile = (props) => {
-  const [state, setState] = useState({ display_name: "", contact: "", bio: "" });
+  const [state, setState] = useState({
+    display_name: "",
+    contact: "",
+    bio: "",
+  });
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
   const handleSubmit = () => {
-    // make a POST to rails to create a new profile
-    createProfile({...state,user_id:props.currentUser.id})
+    createProfile({ ...state, user_id: props.currentUser.id });
   };
   return (
-    <div>
+    <div style={styles.container}>
       Create Profile
       <input
         type="text"
         name="display_name"
         placeholder="display name"
         onChange={handleChange}
+        style={styles.input}
       />
       <input
         type="text"
         name="contact"
         placeholder="contact"
         onChange={handleChange}
+        style={styles.input}
       />
-      <input type="text" name="bio" placeholder="bio" onChange={handleChange} />
+      <input
+        type="text"
+        name="bio"
+        placeholder="bio"
+        onChange={handleChange}
+        style={styles.input}
+      />
       <button onClick={handleSubmit}>Submit</button>
     </div>
   );
