@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import {fetchProfile} from '../api';
 import {
   Card,
   CardBody,
@@ -11,39 +10,35 @@ import {
   Col,
 } from "reactstrap";
 // stretch goal - profile card shows amount of liked songs
+import { fetchProfiles } from "../api";
 
 class Users extends Component {
-
-  componentDidMount(){
-    fetchProfile(this.props.currentUser.id)
-      .then(profile => {
-        console.log({profile})
-      })
+  state = {
+    profiles: [],
+  };
+  async componentDidMount() {
+    const profiles = await fetchProfiles();
+    this.setState({ profiles });
   }
-
   render() {
-    const { profiles } = this.props
+    const { profiles } = this.state;
     return (
-      <>
+      <div className="container">
         {profiles?.map((profile, i) => {
-                return (
-                  <Card key={profile.id}>
-                    <CardBody>
-                      <CardTitle tag="h5">
-                        {profile.display_name}
-                      </CardTitle>
-                      <CardSubtitle className="mb-2 text-muted" tag="h6">
-                      {profile.bio}
-                      </CardSubtitle>
-                      <CardText>
-                        .
-                      </CardText>
-                      <Button>View</Button>
-                    </CardBody>
-                  </Card>
-                );
-              })}
-      </>
+          return (
+            <Card key={profile.id}>
+              <CardBody>
+                <CardTitle tag="h5">{profile.display_name}</CardTitle>
+                <CardSubtitle className="mb-2 text-muted" tag="h6">
+                  {profile.bio}
+                </CardSubtitle>
+                <CardText>{profile.contact_info}</CardText>
+                <Button>View</Button>
+              </CardBody>
+            </Card>
+          );
+        })}
+      </div>
     );
   }
 }

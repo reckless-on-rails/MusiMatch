@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {fetchProfile} from '../api';
+import { fetchProfile, fetchLikesById, fetchSongById } from "../api";
 import {
   Card,
   CardBody,
@@ -10,41 +10,38 @@ import {
   Row,
   Col,
 } from "reactstrap";
-// stretch goal - profile card shows amount of liked songs
 
 class Profile extends Component {
-
-  componentDidMount(){
-    fetchProfile(this.props.currentUser.id)
-      .then(profile => {
-        console.log({profile})
-      })
+  state = {
+    profile: {},
+    likes: [],
+  };
+  async componentDidMount() {
+    const { currentUser } = this.props;
+    const profile = await fetchProfile(currentUser.id);
+    const likes = await fetchLikesById(currentUser.id);
+    this.setState({ profile, likes });
   }
 
   render() {
-    const { profiles } = this.props
+    const { currentUser } = this.props;
+    const { profile, likes } = this.state;
+    const { display_name: displayName } = profile;
     return (
-      <>
-      <h1>hi</h1>
-        {profiles?.map((profile, i) => {
-                return (
-                  <Card key={profile.id}>
-                    <CardBody>
-                      <CardTitle tag="h5">
-                        {profile.display_name}
-                      </CardTitle>
-                      <CardSubtitle className="mb-2 text-muted" tag="h6">
-                      {profile.bio}
-                      </CardSubtitle>
-                      <CardText>
-                        .
-                      </CardText>
-                      <Button>View</Button>
-                    </CardBody>
-                  </Card>
-                );
-              })}
-      </>
+      <div className="container">
+        <h1>Welcome: {currentUser.email}</h1>
+        {Object.keys(profile).length > 0 && (
+          <Card>
+            <CardBody>
+              <CardTitle tag="h5">{displayName}</CardTitle>
+            </CardBody>
+            <CardText>{JSON.stringify(profile, null, 2)}</CardText>
+            <CardText>
+              You've liked {likes.length} songs
+            </CardText>
+          </Card>
+        )}
+      </div>
     );
   }
 }
