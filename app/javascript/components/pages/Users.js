@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { fetchProfile } from "../api";
 import {
   Card,
   CardBody,
@@ -22,9 +21,9 @@ class Users extends Component {
     this.setState({ profiles });
   }
   render() {
-    const { profiles } = this.props;
+    const { profiles } = this.state;
     return (
-      <>
+      <div className="container">
         {profiles?.map((profile, i) => {
           return (
             <Card key={profile.id}>
@@ -33,13 +32,13 @@ class Users extends Component {
                 <CardSubtitle className="mb-2 text-muted" tag="h6">
                   {profile.bio}
                 </CardSubtitle>
-                <CardText>.</CardText>
+                <CardText>{profile.contact_info}</CardText>
                 <Button>View</Button>
               </CardBody>
             </Card>
           );
         })}
-      </>
+      </div>
     );
   }
 }

@@ -9,6 +9,11 @@ class LikesController < ApplicationController
     render json: likes
   end
 
+  def likes_by_id
+    likes = Like.where(user_id: params[:id])
+    render json: likes
+  end
+
   def create
     like = Like.create(like_params)
     render json: like

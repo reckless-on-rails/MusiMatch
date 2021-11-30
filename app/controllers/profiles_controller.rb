@@ -1,12 +1,12 @@
 class ProfilesController < ApplicationController
   def index
     profiles = Profile.all
-    render json: profiles
+    render json: profiles, include: [:likes]
   end
 
   def show
     profile = Profile.find(params[:id])
-    render json: profile
+    render json: profile, include: [:user]
   end
 
   def create

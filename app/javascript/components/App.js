@@ -9,6 +9,8 @@ import AboutUs from "./pages/AboutUs";
 import CreateProfile from "./pages/CreateProfile";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 class App extends React.Component {
   render() {
     return (

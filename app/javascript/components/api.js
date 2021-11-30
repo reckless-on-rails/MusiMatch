@@ -27,6 +27,17 @@ export async function fetchProfile(id) {
   }
 }
 
+
+export async function fetchLikesById(id) {
+  try {
+    const response = await fetch(`/likesbyid/${id}`);
+    return response.json();
+  } catch (e) {
+    console.error(e);
+    return {};
+  }
+}
+
 export async function createProfile(profileData) {
   try {
     const options = {

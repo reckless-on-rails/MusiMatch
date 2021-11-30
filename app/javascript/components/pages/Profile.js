@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { fetchProfile } from "../api";
+import { fetchProfile, fetchLikesById } from "../api";
 import {
   Card,
   CardBody,
@@ -10,32 +10,39 @@ import {
   Row,
   Col,
 } from "reactstrap";
-// stretch goal - profile card shows amount of liked songs
 
 class Profile extends Component {
   state = {
     profile: {},
+    likes: [],
   };
-  componentDidMount() {
-    fetchProfile(this.props.currentUser.id).then((profile) => {
-      this.setState({ profile });
-    });
+  async componentDidMount() {
+    const { currentUser } = this.props;
+    const profile = await fetchProfile(currentUser.id)
+    const likes = await fetchLikesById(currentUser.id)
+    this.setState({ profile, likes });
   }
   render() {
     const { currentUser } = this.props;
-    const { profile } = this.state;
+    const { profile, likes } = this.state;
     const { display_name: displayName } = profile;
     return (
-      <>
+      <div className='container'>
         <h1>Welcome: {currentUser.email}</h1>
         {Object.keys(profile).length > 0 && (
           <Card>
             <CardBody>
-              <CardTitle>{displayName}</CardTitle>
+              <CardTitle tag="h5">{displayName}</CardTitle>
             </CardBody>
+            <CardText>
+                {JSON.stringify(profile, null, 2)}
+            </CardText>
+            <CardText>
+              You've liked {likes.length} songs
+            </CardText>
           </Card>
         )}
-      </>
+      </div>
     );
   }
 }

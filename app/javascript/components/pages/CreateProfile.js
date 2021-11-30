@@ -27,7 +27,7 @@ const CreateProfile = (props) => {
     createProfile({ ...state, user_id: props.currentUser.id });
   };
   return (
-    <div style={styles.container}>
+    <div className='container'>
       Create Profile
       <input
         type="text"
