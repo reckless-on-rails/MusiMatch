@@ -60,9 +60,9 @@ class Header extends Component {
               <NavLink style={styles.link} to="/createProfile">
                 Create Profile
               </NavLink>
-              <NavLink style={styles.link} to={signOutRoute}>
+              <a style={styles.link} href={signOutRoute}>
                 Sign Out
-              </NavLink>
+              </a>
             </>
           )}
         </div>

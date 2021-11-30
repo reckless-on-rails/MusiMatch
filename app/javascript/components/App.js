@@ -8,7 +8,7 @@ import Profile from "./pages/Profile";
 import AboutUs from "./pages/AboutUs";
 import CreateProfile from "./pages/CreateProfile";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+import UserProfile from "./pages/UserProfile"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
@@ -34,7 +34,7 @@ const UnauthRouter = ({ songs }) => (
   </Switch>
 );
 
-const AuthRouter = ({ songs, profiles, current_user: currentUser }) => (
+const AuthRouter = ({ profiles, current_user: currentUser }) => (
   <Switch>
     <Route
       exact
@@ -42,6 +42,7 @@ const AuthRouter = ({ songs, profiles, current_user: currentUser }) => (
       component={() => <Profile currentUser={currentUser} />}
     />
     <Route path="/songindex" component={() => <Songs currentUser={currentUser}/>} />
+    <Route path="/users/:id" component={UserProfile} />
     <Route path="/users" component={() => <Users profiles={profiles} />} />
     <Route path="/aboutus" component={AboutUs} />
     <Route

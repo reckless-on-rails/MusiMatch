@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { thead, tr, th, tbody, Table } from "reactstrap";
 
-import { likeSong, fetchSongs } from "../api";
+import { likeSong, fetchSongs, fetchProfile } from "../api";
 
 class Songs extends Component {
   state = {
@@ -20,7 +20,8 @@ class Songs extends Component {
 
   handleLike = async (songId) => {
     const { currentUser } = this.props;
-    await likeSong(currentUser.id, songId);
+    const profile = await fetchProfile(currentUser.id)
+    await likeSong(profile.id, songId);
     const songs = await fetchSongs();
     this.setState({ songs });
   };
