@@ -38,6 +38,16 @@ export async function fetchLikesById(id) {
   }
 }
 
+export async function fetchSongById(id) {
+  try {
+    const response = await fetch(`/songs/${id}`);
+    return response.json();
+  } catch (e) {
+    console.error(e);
+    return {};
+  }
+}
+
 export async function createProfile(profileData) {
   try {
     const options = {
