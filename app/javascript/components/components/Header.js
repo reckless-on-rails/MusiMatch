@@ -7,6 +7,7 @@ import logo from "../assets/logo.gif";
 
 
 
+
 class Header extends Component {
   render() {
     const {
@@ -24,6 +25,7 @@ class Header extends Component {
           <img src={tape} height="150px" alt="logo" className="logo"></img>
         </NavLink>
         <img src={love}  alt="logo" className="header-profile-img"></img>
+
         </div>
         <div >
           {/* Routes shared for unauth and auth go here */}
@@ -59,3 +61,4 @@ class Header extends Component {
   }
 }
 export default Header;
+

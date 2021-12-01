@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Libre+Barcode+128+Text&family=Monofett&family=Rock+Salt&family=Special+Elite&display=swap');
 
+
 /*---PAGE---*/
 .page-container {
     position: relative;
@@ -13,9 +14,14 @@
 /*---HEADER---*/
 header {
     background-color: black;
-    // background-image: url("../../javascript/components/assets/love.jpg");
+    background-image: url("colornotes.jpg");
     display: flex;
     justify-content: space-between;
+    height: 300px; /* You must set a specified height */
+    // background-position: center; /* Center the image */
+    // background-repeat: no-repeat; /* Do not repeat the image */
+    // background-size: cover; /* Resize the background image to cover the entire container */
+
 }
 
 .tapes {
@@ -28,7 +34,7 @@ header {
     float: left;
     align-items: center;
     position: fixed;
-
+    background-color: #1e1d1d;
 }
 
 
@@ -36,8 +42,6 @@ header {
 th {
   background-color: #dd2e2e;
   font-size: xx-large;
-  // font-family: 'Cinzel', serif;
-  // font-family: 'Rock Salt', cursive;
   font-family: 'Special Elite', cursive;
   
 }
@@ -50,14 +54,13 @@ th {
   font-size: 90px;
   background-color: #dd2e2e;
 
-
 }
 
 .header-profile-img {
   width: 175px;
   height: 175px;
-  border-radius: 25%;
-  margin: 0 6rem 0 6rem; 
+  border-radius: 30%;
+  margin: 2rem 8rem 2rem 8rem; 
  
 }
 
@@ -108,5 +111,11 @@ padding:1rem;
 
   tbody {
     text-align: center;
-  }
+    background: #ffffff url() repeat;
+    border-collapse: collapse;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    }
+  
 

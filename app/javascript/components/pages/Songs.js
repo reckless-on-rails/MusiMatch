@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { thead, tr, th, tbody, Table } from "reactstrap";
 import { likeSong, fetchSongs } from "../api";
 
+
 class Songs extends Component {
   state = {
     loading: false,
@@ -33,6 +34,7 @@ class Songs extends Component {
         {this.state.loading ? (
           <h1>Loading Songs...</h1>
         ) : (
+          <div className="tbody">
           <Table hover>
             <thead>
               <tr>
@@ -69,8 +71,10 @@ class Songs extends Component {
               );
             })}
           </Table>
+          </div>
         )}
       </div>
+      
     );
   }
 }
