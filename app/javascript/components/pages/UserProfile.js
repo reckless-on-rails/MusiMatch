@@ -72,61 +72,6 @@ const SongRow = ({ song }) => {
   );
 };
 
-//       <div className="container">
-//         {this.state.profile ? (
-//           <div>
-//             <h3>{this.state.profile.display_name}</h3>
-//             <h3>Contact Info: {this.state.profile.contact_info}</h3>
-//             <h3>Biography: {this.state.profile.bio}</h3>
-//             <h3>Liked Songs</h3>
 
-//             <div className="container">
-//       <Table>
-//         <thead>
-//           <tr>
-//             <th>COVER</th>
-//             <th>ARTIST</th>
-//             <th>SONG</th>
-//             <th>GENRE</th>
-//           </tr>
-//         </thead>
-
-//       </Table>
-//     </div>
-
-//             {this.state.likes &&
-//               this.state.likes.map(like => (
-//                 <SongRow song={this.state.songs[like.song_id]} />
-//               ))}
-//           </div>
-//         ) : (
-//           <p>There's no profile. You gotta create a profile dude.</p>
-//         )}
-//       </div>
-//     );
-//   }
-// }
-// const SongRow = ({ song, i }) => {
-//   return (
-//     <div className="container">
-//       <Table>
-//         <tbody key={i}>
-//           <tr>
-//             <td>
-//               <img
-//                 src={song.cover_url}
-//                 width="75px"
-//                 height="75px"
-//               ></img>
-//             </td>
-//             <td>{song.song_artist}</td>
-//             <td>{song.song_name}</td>
-//             <td>{song.genre}</td>
-//           </tr>
-//         </tbody>
-//       </Table>
-//     </div>
-//   );
-// };
 
 export default UserProfile;
