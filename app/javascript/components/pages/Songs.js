@@ -38,12 +38,12 @@ class Songs extends Component {
           <Table hover>
             <thead>
               <tr>
-                <th>COVER</th>
+                <th> </th>
                 <th>ARTIST</th>
                 <th>SONG</th>
                 <th>GENRE</th>
-                <th>NUM LIKES</th>
-                <th>LIKE</th>
+                <th>LIKES</th>
+                <th> </th>
               </tr>
             </thead>
             {songs?.map((song, i) => {
@@ -57,7 +57,7 @@ class Songs extends Component {
                         height="75px"
                       ></img>
                     </td>
-                    <td>{song.song_artist}</td>
+                    <td >{song.song_artist}</td>
                     <td>{song.song_name}</td>
                     <td>{song.genre}</td>
                     <td>{song.likes.length}</td>

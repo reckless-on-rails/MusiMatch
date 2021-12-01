@@ -32,7 +32,6 @@ class Users extends Component {
                 <CardSubtitle className="mb-2 text-muted" tag="h6">
                   {profile.bio}
                 </CardSubtitle>
-                <CardText>{profile.contact_info}</CardText>
                 <a href={`/users/${profile.id}`}><Button>View</Button></a>
               </CardBody>
             </Card>

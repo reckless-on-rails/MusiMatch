@@ -38,7 +38,7 @@ const CreateProfile = (props) => {
       />
       <input
         type="text"
-        name="contact"
+        name="contact_info"
         placeholder="contact"
         onChange={handleChange}
         style={styles.input}

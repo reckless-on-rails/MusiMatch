@@ -12,9 +12,10 @@
   
 /*---HEADER---*/
 header {
-    background-color: black;
+    background-color: #0b090a;
     display: flex;
     justify-content: space-between;
+    font-family: 'Rock Salt';
 }
 
 .tapes {
@@ -27,45 +28,49 @@ header {
     float: left;
     align-items: center;
     position: fixed;
-
 }
 
-
+.logo {
+  border-radius: 15px;
+}
 /*---THEME---*/
-th {
+Table {
   background-color: #dd2e2e;
+  text-align: center;
+  font-family: 'Special Elite';
+}
+
+tbody {
+  text-align: center;
+}
+
+th {
   font-size: xx-large;
-  // font-family: 'Cinzel', serif;
-  // font-family: 'Rock Salt', cursive;
-  font-family: 'Special Elite', cursive;
-  
+}
+
+td{
+  vertical-align: center;
+  font-size: x-large;
+}
+
+tbody:hover {
+  background-color: #b1a7a6;
 }
 
 .barcode {
-
   // font-family: 'Monofett', cursive;
-  font-family: 'Libre Barcode 128 Text', cursive;
+  font-family: 'Libre Barcode 128 Text';
   text-align: center;
   font-size: 90px;
   background-color: #dd2e2e;
-
-
 }
 
 
 /*---FOOTER---*/
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;           
-  }
-
-  tbody:hover {
-    background-color: #9b0d37;
-
-  }
-
-  tbody {
-    text-align: center;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;    
+  font-family: 'Special Elite'; 
   }
