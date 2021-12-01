@@ -13,6 +13,7 @@
 /*---HEADER---*/
 header {
     background-color: black;
+    // background-image: url("../../javascript/components/assets/love.jpg");
     display: flex;
     justify-content: space-between;
 }
@@ -55,7 +56,7 @@ th {
 .header-profile-img {
   width: 175px;
   height: 175px;
-  border-radius: 50%;
+  border-radius: 25%;
   margin: 0 6rem 0 6rem; 
  
 }

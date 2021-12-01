@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import tape from "../assets/tape8.gif";
+import tape from "../assets/tape7.gif";
 import musi from "../assets/musimatch.gif"
+import love from "../assets/love.gif"
+import logo from "../assets/logo.gif";
+
 
 
 class Header extends Component {
@@ -16,11 +19,11 @@ class Header extends Component {
     return (
       <header className="outer-wrapper">
         <div className="image-container">
-      <img src={musi}  alt="logo" className="header-profile-img"></img>
+      <img src={love}  alt="logo" className="header-profile-img"></img>
         <NavLink  to="/">
-          <img src={tape} alt="logo" className="logo"></img>
+          <img src={tape} height="150px" alt="logo" className="logo"></img>
         </NavLink>
-        <img src={musi}  alt="logo" className="header-profile-img"></img>
+        <img src={love}  alt="logo" className="header-profile-img"></img>
         </div>
         <div >
           {/* Routes shared for unauth and auth go here */}
