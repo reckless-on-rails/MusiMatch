@@ -16,10 +16,7 @@ class LikesController < ApplicationController
 
   def create
     found_like = Like.find_by(like_params)
-    # puts "AHHHHH"
-    # puts found_like
     if found_like.present?
-
       found_like.destroy
       render json: []
     else
@@ -38,6 +35,5 @@ class LikesController < ApplicationController
 
   def like_params
     params.require(:like).permit(:profile_id, :song_id)
-    # ask mentor about user id
   end
 end

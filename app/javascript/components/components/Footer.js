@@ -7,7 +7,7 @@ class Footer extends Component {
       <>
         <NavLink to="/aboutus">About Us</NavLink>
         <br />
-        <p>©Reckless on Rails</p>
+        <p>©Reckless on Rails 2021</p>
       </>
     );
   }
