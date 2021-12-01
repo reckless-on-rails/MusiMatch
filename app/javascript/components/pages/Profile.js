@@ -19,7 +19,7 @@ class Profile extends Component {
     });
     this.setState({ profile, likes, songs });
   }
-  
+
   render() {
     const { currentUser } = this.props;
     const { profile, likes } = this.state;
@@ -28,16 +28,30 @@ class Profile extends Component {
       <div className="container">
         <h1>Welcome {displayName}</h1>
         {Object.keys(profile).length > 0 && (
-        <div>
-          <h3>User Email: {currentUser.email}</h3>
-          <h3>Contact Info: {this.state.profile.contact_info}</h3>
-          <h3>Biography: {this.state.profile.bio}</h3>
-          <h3>You've liked {likes.length} songs.</h3>
-          {this.state.likes &&
-            this.state.likes.map(like => (
-              <SongRow song={this.state.songs[like.song_id]} />
-            ))}
-        </div>
+          <div>
+            <h3>User Email: {currentUser.email}</h3>
+            <h3>Contact Info: {this.state.profile.contact_info}</h3>
+            <h3>Biography: {this.state.profile.bio}</h3>
+            <h3>You've liked {likes.length} songs.</h3>
+
+            <div className="container">
+              <Table>
+                <thead>
+                  <tr>
+                    <th> </th>
+                    <th>ARTIST</th>
+                    <th>SONG</th>
+                    <th>GENRE</th>
+                  </tr>
+                </thead>
+
+                {this.state.likes &&
+                  this.state.likes.map((like) => (
+                    <SongRow song={this.state.songs[like.song_id]} />
+                  ))}
+              </Table>
+            </div>
+          </div>
         )}
       </div>
     );
@@ -46,24 +60,16 @@ class Profile extends Component {
 
 const SongRow = ({ song }) => {
   return (
-    <div className="container">
-      <Table>
-        <tbody>
-          <tr>
-            <td>
-              <img
-                src={song.cover_url}
-                width="75px"
-                height="75px">
-              </img>
-            </td>
-            <td>{song.song_artist}</td>
-            <td>{song.song_name}</td>
-            <td>{song.genre}</td>
-          </tr>
-        </tbody>
-      </Table>
-    </div>
+    <tbody>
+      <tr>
+        <td>
+          <img src={song.cover_url} width="75px" height="75px"></img>
+        </td>
+        <td>{song.song_artist}</td>
+        <td>{song.song_name}</td>
+        <td>{song.genre}</td>
+      </tr>
+    </tbody>
   );
 };
 
