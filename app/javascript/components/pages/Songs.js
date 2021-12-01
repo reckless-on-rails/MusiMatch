@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { thead, tr, th, tbody, Table } from "reactstrap";
-
 import { likeSong, fetchSongs } from "../api";
 
 class Songs extends Component {
