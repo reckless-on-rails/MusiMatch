@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { thead, tr, th, tbody, Table } from "reactstrap";
+import { Table } from "reactstrap";
 import { fetchProfile, fetchLikesByProfileId, fetchSongs } from "../api";
 
 class UserProfile extends Component {
