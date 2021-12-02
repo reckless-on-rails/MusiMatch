@@ -9,7 +9,7 @@ Enzyme.configure({adapter: new Adapter()})
 describe("When Footer renders", () => {
     it("displays a footer", () => {
         const footer = shallow(<Footer />).find("p")
-        expect(footer.text()).toEqual("©Reckless on Rails")
+        expect(footer.text()).toEqual("©Reckless on Rails 2021")
       })
 
 })
