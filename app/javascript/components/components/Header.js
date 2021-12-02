@@ -1,27 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import tape from "../assets/tape8.gif";
+import tape from "../assets/tape7.gif";
+import love from "../assets/love.gif"
 
-const styles = {
-  container: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-  },
-  img: {},
-  navLinks: {
-    display: "flex",
-    flexDirection: "row",
-    margin: "1rem",
-  },
-  link: {
-    color: "white",
-    textDecoration: "none",
-    margin: "0 0.5rem 0 0.5rem",
-  },
-};
 
 class Header extends Component {
   render() {
@@ -33,36 +14,41 @@ class Header extends Component {
       sign_out_route: signOutRoute,
     } = this.props;
     return (
-      <header style={styles.container}>
-        <NavLink style={styles.img} to="/">
-          <img src={tape} alt="logo" className="logo"></img>
+      <header className="outer-wrapper">
+        <div className="image-container">
+      <img src={love}  alt="logo" className="header-profile-img"></img>
+        <NavLink  to="/">
+          <img src={tape} height="150px" alt="logo" className="logo"></img>
         </NavLink>
-        <div style={styles.navLinks}>
+        <img src={love}  alt="logo" className="header-profile-img"></img>
+
+        </div>
+        <div >
           {/* Routes shared for unauth and auth go here */}
-          <NavLink to='/' style={styles.link}>Home</NavLink>
+          <NavLink to='/' className="link" >Home</NavLink>
           {!loggedIn ? (
             <>
-              <a style={styles.link} href={newUserRoute}>
+              <a className="link" href={newUserRoute}>
                 Sign Up
               </a>
-              <a style={styles.link} href={signInRoute}>
+              <a className="link" href={signInRoute}>
                 Sign In
               </a>
             </>
           ) : (
             <>
-              <NavLink style={styles.link} to="/songindex">
+              <NavLink to="/songindex" className="link" >
                 Library
               </NavLink>
-              <NavLink style={styles.link} to="/users">
+              <NavLink to="/users" className="link" >
                 Users
               </NavLink>
-              <NavLink style={styles.link} to="/createProfile">
+              <NavLink to="/createProfile" className="link" >
                 Create Profile
               </NavLink>
-              <a style={styles.link} href={signOutRoute}>
+              <NavLink to={signOutRoute} className="link" >
                 Sign Out
-              </a>
+              </NavLink>
             </>
           )}
         </div>
@@ -71,3 +57,4 @@ class Header extends Component {
   }
 }
 export default Header;
+
