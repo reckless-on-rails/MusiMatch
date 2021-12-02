@@ -9,7 +9,6 @@ import {
   Row,
   Col,
 } from "reactstrap";
-// stretch goal - profile card shows amount of liked songs
 import { fetchProfiles } from "../api";
 
 class Users extends Component {
