@@ -12,10 +12,15 @@
   
 /*---HEADER---*/
 header {
-    background-color: #0b090a;
+    background-color: black;
+    background-image: url("colornotes.jpg");
     display: flex;
     justify-content: space-between;
     font-family: 'Rock Salt';
+    height: 300px;
+    // background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    // background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .tapes {
@@ -54,7 +59,7 @@ td{
 }
 
 tbody:hover {
-  background-color: #b1a7a6;
+  background-color: salmon;
 }
 
 .barcode {
@@ -65,13 +70,57 @@ tbody:hover {
   background-color: #dd2e2e;
 }
 
+.header-profile-img {
+  width: 175px;
+  height: 175px;
+  border-radius: 30%;
+  margin: 2rem 8rem 2rem 8rem; 
+ 
+}
+
+.outer-wrapper {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding:1rem;
+
+}
+
+.image-container {
+  margin: 1rem; 
+
+
+}
+
+.link-container {
+  margin: 1rem;
+
+}
+
+.link {
+  color: white;
+  margin: 1rem;
+  text-decoration: none;
+
+}
+
+.link:hover {
+  color:salmon;
+}
+
+
 
 /*---FOOTER---*/
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;    
+  padding: 20px;
+  height: 2.5rem; 
+  min-height: 100%;
+  height: 50px;
+  margin: 0 auto -50px;
   font-family: 'Special Elite'; 
   }
 
