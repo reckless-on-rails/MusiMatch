@@ -7,7 +7,7 @@
   }
   
 .content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
+    padding-bottom: 2.5rem;    
   }
   
 /*---HEADER---*/
@@ -18,9 +18,7 @@ header {
     justify-content: space-between;
     font-family: 'Rock Salt';
     height: 300px;
-    // background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    // background-size: cover; /* Resize the background image to cover the entire container */
+    background-repeat: no-repeat; 
 }
 
 .tapes {
@@ -63,11 +61,11 @@ tbody:hover {
 }
 
 .barcode {
-  // font-family: 'Monofett', cursive;
   font-family: 'Libre Barcode 128 Text';
   text-align: center;
   font-size: 90px;
   background-color: #dd2e2e;
+
 }
 
 .header-profile-img {
@@ -122,6 +120,7 @@ footer {
   height: 50px;
   margin: 0 auto -50px;
   font-family: 'Special Elite'; 
+
   }
 
   
